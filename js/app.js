@@ -7,6 +7,7 @@ import {
   personFilterQuery,
   dayMatchesFilter,
   filteredEvents,
+  filteredDayTotals,
   shortName,
   escapeHtml,
 } from "./shared.js";
@@ -15,11 +16,21 @@ let state = {
   travelers: [],
   days: [],
   selected: [],
+  fxJpyToCop: 21,
+  focusDate: "",
 };
+
+function updateTripPulseLink() {
+  const pulse = document.getElementById("trip-pulse");
+  if (pulse && state.focusDate) {
+    pulse.href = `./dias/${state.focusDate}.html${personFilterQuery(state.selected)}`;
+  }
+}
 
 function renderFilters() {
   const el = document.getElementById("travelers");
   if (!el) return;
+  const previousFocus = document.activeElement?.dataset?.filter;
 
   const allActive = state.selected.length === 0;
   el.innerHTML = `
@@ -54,8 +65,12 @@ function renderFilters() {
       renderFilters();
       renderDays();
       renderFilterStatus();
+      updateTripPulseLink();
     });
   });
+  if (previousFocus) {
+    el.querySelector(`[data-filter="${previousFocus}"]`)?.focus();
+  }
 }
 
 function renderFilterStatus() {
@@ -91,9 +106,15 @@ function renderDays() {
       const dayIndex = state.days.findIndex((item) => item.date === day.date);
       const events = filteredEvents(day, state.selected);
       const href = `./dias/${day.date}.html${q}`;
+      const totals = filteredDayTotals(
+        day,
+        events,
+        state.selected,
+        state.fxJpyToCop
+      );
       const total =
-        day.perPersonTotalJPY > 0
-          ? `${formatMoney(day.perPersonTotalJPY, "JPY")} / pers.`
+        totals.jpy > 0
+          ? `${formatMoney(totals.jpy, "JPY")} / pers.`
           : "—";
       const countLabel = state.selected.length
         ? `${events.length} evento${events.length === 1 ? "" : "s"}`
@@ -109,7 +130,7 @@ function renderDays() {
         : hasHigh
           ? '<span class="badge flag flag-high">revisar</span>'
           : "";
-      return `<li class="day-stop">
+      return `<li class="day-stop ${day.date === state.focusDate ? "is-next" : ""}">
         <a href="${href}">
           <span class="route-marker" aria-hidden="true"><b>${String(dayIndex).padStart(2, "0")}</b></span>
           <div class="day-copy">
@@ -136,6 +157,7 @@ async function main() {
   const meta = data.meta;
   state.travelers = meta.travelers || [];
   state.days = data.days || [];
+  state.fxJpyToCop = Number(meta.fxJPY_to_COP) || 21;
   state.selected = readPersonFilter().filter((id) =>
     state.travelers.some((t) => t.id === id)
   );
@@ -148,17 +170,33 @@ async function main() {
   const countdown = document.getElementById("trip-countdown");
   const countdownLabel = document.getElementById("trip-countdown-label");
   if (countdown && countdownLabel) {
-    const today = new Date();
-    today.setHours(12, 0, 0, 0);
+    const tokyoParts = Object.fromEntries(
+      new Intl.DateTimeFormat("en", {
+        timeZone: "Asia/Tokyo",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      })
+        .formatToParts(new Date())
+        .filter((part) => part.type !== "literal")
+        .map((part) => [part.type, part.value])
+    );
+    const todayIso = `${tokyoParts.year}-${tokyoParts.month}-${tokyoParts.day}`;
+    const today = new Date(`${todayIso}T12:00:00`);
     const start = new Date(`${meta.startDate}T12:00:00`);
     const end = new Date(`${meta.endDate}T12:00:00`);
     const daysUntil = Math.ceil((start - today) / 86400000);
+    const focusDay =
+      state.days.find((day) => day.date >= todayIso) ||
+      state.days[state.days.length - 1];
+    state.focusDate = focusDay?.date || "";
+    updateTripPulseLink();
     if (daysUntil > 0) {
       countdown.textContent = `${daysUntil} día${daysUntil === 1 ? "" : "s"}`;
       countdownLabel.textContent = "para empezar la ruta";
     } else if (today <= end) {
-      const currentDay = Math.floor((today - start) / 86400000) + 1;
-      countdown.textContent = `Día ${currentDay} de 21`;
+      const currentDay = state.days.findIndex((day) => day.date === todayIso);
+      countdown.textContent = `Día ${Math.max(currentDay, 0)} de ${state.days.length - 1}`;
       countdownLabel.textContent = "estamos en Japón";
     } else {
       countdown.textContent = "21 días";

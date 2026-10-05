@@ -47,9 +47,36 @@ export function participantChips(participants) {
     .map((p) => {
       const cls = p.going ? "going" : "missing";
       const tip = !p.going && p.reason ? ` title="${escapeAttr(p.reason)}"` : "";
-      return `<span class="chip ${cls}"${tip}>${escapeHtml(p.name.split(" ")[0])}</span>`;
+      const reason = !p.going && p.reason ? ` · ${escapeHtml(p.reason)}` : "";
+      return `<span class="chip ${cls}"${tip}>${escapeHtml(p.name.split(" ")[0])}${reason}</span>`;
     })
     .join("");
+}
+
+export function filteredDayTotals(day, events, personIds, fxJpyToCop = 21) {
+  if (!personIds?.length) {
+    return {
+      jpy: Number(day.perPersonTotalJPY) || 0,
+      cop: Number(day.perPersonTotalCOP) || 0,
+    };
+  }
+
+  const hasLocalDayActivity = (events || []).some(
+    (event) => !["vuelo", "hotel"].includes(event.category)
+  );
+  let jpy = hasLocalDayActivity ? Number(day.foodBudgetJPY) || 0 : 0;
+  let directCop = 0;
+  for (const event of events || []) {
+    for (const cost of event.costs || []) {
+      if (!cost.perPerson) continue;
+      if (cost.currency === "JPY") jpy += Number(cost.amount) || 0;
+      if (cost.currency === "COP") directCop += Number(cost.amount) || 0;
+    }
+  }
+  return {
+    jpy,
+    cop: Math.round(jpy * fxJpyToCop + directCop),
+  };
 }
 
 export function escapeHtml(s) {

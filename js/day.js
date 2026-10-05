@@ -10,6 +10,7 @@ import {
   readPersonFilter,
   personFilterQuery,
   filteredEvents,
+  filteredDayTotals,
   shortName,
 } from "./shared.js";
 
@@ -100,6 +101,7 @@ function googleMapsPlaceUrl(place) {
 }
 
 function googleMapsDirUrl(fromPlace, toPlace, mode) {
+  if (mode === "flight") return null;
   if (!isUsablePlace(fromPlace) || !isUsablePlace(toPlace)) return null;
   if (placesAreSame(fromPlace, toPlace)) return null;
 
@@ -109,7 +111,6 @@ function googleMapsDirUrl(fromPlace, toPlace, mode) {
     tren: "transit",
     bus: "transit",
     taxi: "driving",
-    flight: "driving",
     none: "walking",
   }[mode] || "transit";
 
@@ -129,8 +130,8 @@ function googleMapsDirUrl(fromPlace, toPlace, mode) {
 
 function osrmProfile(mode) {
   if (mode === "walk" || mode === "none") return "walking";
-  if (mode === "flight") return null;
-  return "driving";
+  if (mode === "taxi") return "driving";
+  return null;
 }
 
 function initDayMap(day) {
@@ -138,7 +139,11 @@ function initDayMap(day) {
   if (!el || !window.L) return;
 
   const center = day.mapCenter || { lat: 35.68, lng: 139.76 };
-  const map = L.map(el, { scrollWheelZoom: false }).setView(
+  const map = L.map(el, {
+    scrollWheelZoom: false,
+    dragging: false,
+    tap: false,
+  }).setView(
     [center.lat, center.lng],
     12
   );
@@ -188,7 +193,7 @@ async function fetchOsrmRoute(from, to, profile) {
 }
 
 async function renderEventMap(event, container) {
-  if (!window.L || mapInstances.has(event.id)) {
+  if (mapInstances.has(event.id)) {
     const existing = mapInstances.get(event.id);
     if (existing) setTimeout(() => existing.invalidateSize(), 50);
     return;
@@ -209,6 +214,14 @@ async function renderEventMap(event, container) {
   if (!gmapsUrl) {
     gmapsUrl = googleMapsPlaceUrl(event.to || event.from);
     gmapsLabel = "Ver lugar en Google Maps";
+  }
+  if (!window.L) {
+    const link = gmapsUrl
+      ? `<p class="map-links"><a class="map-cta" href="${gmapsUrl}" target="_blank" rel="noopener">${gmapsLabel}</a></p>`
+      : "";
+    container.innerHTML = `<p class="map-fallback">Mapa no disponible en este momento.</p>${link}`;
+    container.classList.add("is-ready");
+    return;
   }
   if (!from && !to) {
     const link = gmapsUrl
@@ -233,7 +246,11 @@ async function renderEventMap(event, container) {
     : "";
 
   const only = to || from;
-  const map = L.map(mapEl, { scrollWheelZoom: false }).setView(
+  const map = L.map(mapEl, {
+    scrollWheelZoom: false,
+    dragging: false,
+    tap: false,
+  }).setView(
     [only.lat, only.lng],
     14
   );
@@ -292,8 +309,11 @@ async function renderEventMap(event, container) {
         padding: [40, 40],
         maxZoom: 6,
       });
-      linkWrap.innerHTML +=
-        ' <span class="map-meta">· Tramo aéreo: solo marcadores</span>';
+      const note =
+        mode === "flight"
+          ? "Tramo aéreo: solo marcadores"
+          : "Tramo en transporte público: consultá la ruta en Google Maps";
+      linkWrap.innerHTML += ` <span class="map-meta">· ${note}</span>`;
     }
   } else if (markers.length) {
     map.setView(markers[0].getLatLng(), 15);
@@ -388,7 +408,12 @@ function flagBadges(flags) {
   return flags
     .map((f) => {
       const sev = f.severity || "medium";
-      const label = f.code || sev;
+      const label = {
+        critical: "Alerta",
+        high: "Revisar",
+        medium: "Nota",
+        low: "Info",
+      }[sev] || "Nota";
       return `<span class="badge flag flag-${escapeHtml(sev)}" title="${escapeHtml(f.message || "")}">${escapeHtml(label)}</span>`;
     })
     .join("");
@@ -464,7 +489,7 @@ function eventHtml(ev) {
         ${flags}
       </div>
       <h3>${escapeHtml(ev.title)}</h3>
-      <span class="expand-hint" data-closed="Tocá para ver detalle ▾" data-open="Ocultar detalle ▴"></span>
+      <span class="expand-hint"><span class="when-closed">Ver detalle ▾</span><span class="when-open">Ocultar detalle ▴</span></span>
     </summary>
     <div class="event-body">
       ${
@@ -501,10 +526,6 @@ function eventHtml(ev) {
 }
 
 async function main() {
-  if (!window.L) {
-    throw new Error("Leaflet no cargó. Revisá la conexión a unpkg/cdnjs.");
-  }
-
   const data = await loadItinerary("../data/itinerary.json");
   const travelers = data.meta?.travelers || [];
   const personIds = readPersonFilter().filter((id) =>
@@ -523,6 +544,22 @@ async function main() {
   }
 
   const events = filteredEvents(day, personIds);
+  const dayIndex = data.days.findIndex((item) => item.date === DAY_DATE);
+  const neighbors = document.getElementById("day-nav-neighbors");
+  if (neighbors) {
+    const previous = data.days[dayIndex - 1];
+    const next = data.days[dayIndex + 1];
+    neighbors.innerHTML = [
+      previous
+        ? `<a href="./${previous.date}.html${filterQ}">← Día ${dayIndex - 1}</a>`
+        : "",
+      next
+        ? `<a href="./${next.date}.html${filterQ}">Día ${dayIndex + 1} →</a>`
+        : "",
+    ]
+      .filter(Boolean)
+      .join("");
+  }
 
   document.title = `${day.title} · Viaje Japón`;
   document.getElementById("day-title").textContent = day.title;
@@ -541,12 +578,31 @@ async function main() {
     cover.hidden = false;
   }
   document.getElementById("stat-city").textContent = day.city || "—";
-  document.getElementById("stat-hotel").textContent =
-    day.hotel?.name || day.hotel?.group || "—";
-  if (day.hotel?.sergioArley && day.hotel.sergioArley !== "Con el grupo") {
-    document.getElementById("stat-hotel").title =
-      `Grupo: ${day.hotel.group || ""} · Sergio/Arley: ${day.hotel.sergioArley}`;
+  const hotelStat = document.getElementById("stat-hotel");
+  const splitHotel =
+    day.hotel?.sergioArley && day.hotel.sergioArley !== "Con el grupo";
+  const onlySergioArley =
+    personIds.length > 0 &&
+    personIds.every((id) => id === "sergio" || id === "arley");
+  if (splitHotel && onlySergioArley) {
+    hotelStat.textContent = day.hotel.sergioArley;
+  } else if (splitHotel && personIds.length) {
+    hotelStat.textContent = `Grupo: ${day.hotel.group || "—"} · Sergio/Arley: ${day.hotel.sergioArley}`;
+  } else {
+    hotelStat.textContent = day.hotel?.name || day.hotel?.group || "—";
   }
+  const firstVisiblePlace = events
+    .map((event) => placeToLatLng(event.to) || placeToLatLng(event.from))
+    .find(Boolean);
+  const mapDay = {
+    ...day,
+    events,
+    hotel: splitHotel && onlySergioArley ? null : day.hotel,
+    mapCenter:
+      splitHotel && onlySergioArley && firstVisiblePlace
+        ? firstVisiblePlace
+        : day.mapCenter,
+  };
 
   let essentials = document.getElementById("day-essentials");
   if (!essentials) {
@@ -594,23 +650,24 @@ async function main() {
     riskBanner.innerHTML = "";
   }
 
-  // Totals: if filtered, sum only matching events' per-person JPY costs
-  let totalJpy = day.perPersonTotalJPY;
-  let totalCop = day.perPersonTotalCOP;
-  if (personIds.length) {
-    totalJpy = events.reduce((sum, ev) => {
-      for (const c of ev.costs || []) {
-        if (c.perPerson && c.currency === "JPY") sum += Number(c.amount) || 0;
-      }
-      return sum;
-    }, 0);
-    totalCop = Math.round(totalJpy * (data.meta?.fxJPY_to_COP || 21));
-  }
-  document.getElementById("stat-jpy").textContent = formatMoney(totalJpy, "JPY");
-  document.getElementById("stat-cop").textContent = formatMoney(totalCop, "COP");
+  const totals = filteredDayTotals(
+    day,
+    events,
+    personIds,
+    data.meta?.fxJPY_to_COP || 21
+  );
+  document.getElementById("stat-jpy").textContent = formatMoney(totals.jpy, "JPY");
+  document.getElementById("stat-cop").textContent = formatMoney(totals.cop, "COP");
 
   const warn = document.getElementById("maps-warn");
-  if (warn) warn.hidden = true;
+  if (warn) {
+    warn.hidden = Boolean(window.L);
+    warn.textContent = window.L
+      ? ""
+      : "El mapa no pudo cargar, pero el itinerario y los enlaces de Google Maps siguen disponibles.";
+  }
+  const dayMap = document.getElementById("day-map");
+  if (dayMap && !window.L) dayMap.hidden = true;
 
   let banner = document.getElementById("filter-banner");
   if (!banner) {
@@ -638,12 +695,12 @@ async function main() {
   if (!events.length) {
     eventsEl.innerHTML =
       '<p style="color:var(--muted);">Nadie del filtro participa en eventos este día.</p>';
-    initDayMap({ ...day, events: [] });
+    if (dayMap) dayMap.hidden = true;
     return;
   }
 
   eventsEl.innerHTML = events.map(eventHtml).join("");
-  initDayMap({ ...day, events });
+  initDayMap(mapDay);
 
   eventsEl.querySelectorAll("details.event").forEach((details) => {
     details.addEventListener("toggle", () => {

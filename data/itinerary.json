@@ -48,7 +48,7 @@
       }
     ],
     "source": "Excel Sebastián + reservas Gmail + ajustes Sergio/Arley",
-    "generatedAt": "2026-10-05T18:48:53",
+    "generatedAt": "2026-10-05T18:59:06",
     "auditCounts": {
       "critical": 10,
       "high": 37,
@@ -63,7 +63,7 @@
       "weekday": "jueves",
       "title": "Jueves 2026-10-29 — Tokio (Día 0)",
       "city": "Tokio",
-      "summary": "Plan del grupo en Tokio v1. Detalle hora a hora abajo.",
+      "summary": "1 paradas · Empieza con Hotel en Tokyo ESTABLISHMENT Asakusa.",
       "mapCenter": {
         "name": "Establishment Asakusa",
         "query": "Establishment Asakusa, 3-28-21 Oshiage, Sumida, Tokyo",
@@ -185,7 +185,7 @@
       "weekday": "viernes",
       "title": "Viernes 2026-10-30 — Tokio (Día 1)",
       "city": "Tokio",
-      "summary": "Plan del grupo en Tokio v1. Detalle hora a hora abajo.",
+      "summary": "9 paradas · Empieza con Vuelo Medellín → Los Ángeles (Sergio y Arley).",
       "mapCenter": {
         "name": "Establishment Asakusa",
         "query": "Establishment Asakusa, 3-28-21 Oshiage, Sumida, Tokyo",
@@ -1028,7 +1028,7 @@
       "weekday": "sábado",
       "title": "Sábado 2026-10-31 — Tokio (Día 2)",
       "city": "Tokio",
-      "summary": "Plan del grupo en Tokio v1. Detalle hora a hora abajo.",
+      "summary": "6 paradas · Empieza con Vuelo LAX → Narita SQ 11 (Sergio y Arley).",
       "mapCenter": {
         "name": "Establishment Asakusa",
         "query": "Establishment Asakusa, 3-28-21 Oshiage, Sumida, Tokyo",
@@ -4200,7 +4200,7 @@
       "weekday": "miércoles",
       "title": "Miércoles 2026-11-04 — Kawaguchiko → Kioto (Día 6)",
       "city": "Kawaguchiko → Kioto",
-      "summary": "Plan del grupo en Mt. fuji. Detalle hora a hora abajo.",
+      "summary": "8 paradas · Empieza con Pagoda Chureito.",
       "mapCenter": {
         "name": "Estación Kawaguchiko",
         "query": "Kawaguchiko Station",
@@ -4964,7 +4964,7 @@
       "weekday": "jueves",
       "title": "Jueves 2026-11-05 — Kioto (Día 7)",
       "city": "Kioto",
-      "summary": "Plan del grupo en Kansai (Kioto. Detalle hora a hora abajo.",
+      "summary": "14 paradas · Empieza con Transporte Hotel - Arashiyama.",
       "mapCenter": {
         "name": "Hotel Kioto (Kariganecho)",
         "query": "409-1 Kariganecho Shimogyo Kyoto",
@@ -6299,7 +6299,7 @@
       "weekday": "viernes",
       "title": "Viernes 2026-11-06 — Kioto (Día 8)",
       "city": "Kioto",
-      "summary": "Plan del grupo en Kansai (Kioto. Detalle hora a hora abajo.",
+      "summary": "9 paradas · Empieza con Transporte Hotel - Kiyomizudera.",
       "mapCenter": {
         "name": "Hotel Kioto (Kariganecho)",
         "query": "409-1 Kariganecho Shimogyo Kyoto",
@@ -7156,7 +7156,7 @@
       "weekday": "sábado",
       "title": "Sábado 2026-11-07 — Osaka (Día 9)",
       "city": "Osaka",
-      "summary": "Plan del grupo en Kansai (Kioto. Detalle hora a hora abajo.",
+      "summary": "7 paradas · Empieza con Desayuno (en Kuromon).",
       "mapCenter": {
         "name": "Hotel Kioto (Kariganecho)",
         "query": "409-1 Kariganecho Shimogyo Kyoto",
@@ -7817,7 +7817,7 @@
       "weekday": "domingo",
       "title": "Domingo 2026-11-08 — Osaka (Día 10)",
       "city": "Osaka",
-      "summary": "Plan del grupo en Kansai (Kioto. Detalle hora a hora abajo.",
+      "summary": "7 paradas · Empieza con Transporte del hotel a estacion Kintetsu-Nara.",
       "mapCenter": {
         "name": "Hotel Kioto (Kariganecho)",
         "query": "409-1 Kariganecho Shimogyo Kyoto",
@@ -8508,7 +8508,7 @@
       "weekday": "lunes",
       "title": "Lunes 2026-11-09 — Osaka (Día 11)",
       "city": "Osaka",
-      "summary": "Plan del grupo en Kansai (Kioto. Detalle hora a hora abajo.",
+      "summary": "9 paradas · Empieza con Transporte Osaka - Fushimi-inari (ida y vuelta).",
       "mapCenter": {
         "name": "Hotel Kioto (Kariganecho)",
         "query": "409-1 Kariganecho Shimogyo Kyoto",
@@ -9391,7 +9391,7 @@
       "weekday": "martes",
       "title": "Martes 2026-11-10 — Osaka (Día 12)",
       "city": "Osaka",
-      "summary": "Plan del grupo en Kansai (Kioto. Detalle hora a hora abajo.",
+      "summary": "2 paradas · Empieza con Dia Comodin: Universal Studios Japan o tour Himeji-Kobe o alguna otra cosa en Osaka (acuario por ejemplo).",
       "mapCenter": {
         "name": "Hotel Kioto (Kariganecho)",
         "query": "409-1 Kariganecho Shimogyo Kyoto",
@@ -9600,7 +9600,7 @@
       "weekday": "miércoles",
       "title": "Miércoles 2026-11-11 — Osaka → Nagoya → Kanazawa (Día 13)",
       "city": "Osaka → Nagoya → Kanazawa",
-      "summary": "Plan del grupo en Kansai (Kioto. Detalle hora a hora abajo.",
+      "summary": "5 paradas · Empieza con Envio de Maletas a Tokyo (aca solo vamos con mochila individual hasta volver a Tokyo).",
       "mapCenter": {
         "name": "Hotel Kioto (Kariganecho)",
         "query": "409-1 Kariganecho Shimogyo Kyoto",
@@ -10096,7 +10096,7 @@
       "weekday": "jueves",
       "title": "Jueves 2026-11-12 — Kanazawa (Día 14)",
       "city": "Kanazawa",
-      "summary": "Plan del grupo en Kanazawa. Detalle hora a hora abajo.",
+      "summary": "5 paradas · Empieza con El Jardín Kenroku-en.",
       "mapCenter": {
         "name": "Airbnb Kanazawa",
         "query": "2-12 Kasaichimachi Kanazawa",
@@ -10562,7 +10562,7 @@
       "weekday": "viernes",
       "title": "Viernes 2026-11-13 — Kanazawa (Día 15)",
       "city": "Kanazawa",
-      "summary": "Plan del grupo en Kanazawa. Detalle hora a hora abajo.",
+      "summary": "7 paradas · Empieza con Distrito de Nagamachi (El Barrio Samurái).",
       "mapCenter": {
         "name": "Airbnb Kanazawa",
         "query": "2-12 Kasaichimachi Kanazawa",
@@ -11197,7 +11197,7 @@
       "weekday": "sábado",
       "title": "Sábado 2026-11-14 — Tokio (Día 16)",
       "city": "Tokio",
-      "summary": "Plan del grupo en Tokio v2. Detalle hora a hora abajo.",
+      "summary": "6 paradas · Empieza con Shinkansen Kanazawa - Tokyo.",
       "mapCenter": {
         "name": "Hotel Yoyogi Uehara",
         "query": "Hotel Yoyogi Uehara 17 Oyamacho Shibuya",
@@ -11759,7 +11759,7 @@
       "weekday": "domingo",
       "title": "Domingo 2026-11-15 — Tokio (Día 17)",
       "city": "Tokio",
-      "summary": "Plan del grupo en Tokio v2. Detalle hora a hora abajo.",
+      "summary": "7 paradas · Empieza con Santuario Meiji Jingu por la mañana (Festival Shichi-Go-San con niños en kimono).",
       "mapCenter": {
         "name": "Hotel Yoyogi Uehara",
         "query": "Hotel Yoyogi Uehara 17 Oyamacho Shibuya",
@@ -12416,7 +12416,7 @@
       "weekday": "lunes",
       "title": "Lunes 2026-11-16 — Tokio (Día 18)",
       "city": "Tokio",
-      "summary": "Plan del grupo en Tokio v2. Detalle hora a hora abajo.",
+      "summary": "4 paradas · Empieza con Disney sea?.",
       "mapCenter": {
         "name": "Hotel Yoyogi Uehara",
         "query": "Hotel Yoyogi Uehara 17 Oyamacho Shibuya",
@@ -12786,7 +12786,7 @@
       "weekday": "martes",
       "title": "Martes 2026-11-17 — Tokio (Día 19)",
       "city": "Tokio",
-      "summary": "Plan del grupo en Tokio v2. Detalle hora a hora abajo.",
+      "summary": "4 paradas · Empieza con Actividad libre en tokyo.",
       "mapCenter": {
         "name": "Hotel Yoyogi Uehara",
         "query": "Hotel Yoyogi Uehara 17 Oyamacho Shibuya",
@@ -13154,7 +13154,7 @@
       "weekday": "miércoles",
       "title": "Miércoles 2026-11-18 — Tokio → LAX (Día 20)",
       "city": "Tokio → LAX",
-      "summary": "Plan del grupo en Tokio v2. Detalle hora a hora abajo.",
+      "summary": "2 paradas · Empieza con Yoyogi → Haneda (Sergio y Arley).",
       "mapCenter": {
         "name": "Hotel Yoyogi Uehara",
         "query": "Hotel Yoyogi Uehara 17 Oyamacho Shibuya",

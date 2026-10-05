@@ -1945,6 +1945,13 @@ def main():
 
     inject_special_events(days)
 
+    for day in days.values():
+        if day["summary"].startswith("Plan del grupo") and day["events"]:
+            first_stop = day["events"][0]["title"]
+            day["summary"] = (
+                f"{len(day['events'])} paradas · Empieza con {first_stop}."
+            )
+
     # Stamp track/flags on injected events before enrichment
     from audit_enrich import assign_track, enrich_days, write_audit_json
 
@@ -2034,7 +2041,10 @@ DAY_PAGE_TEMPLATE = """<!DOCTYPE html>
   <body data-date="{date}">
     <main class="wrap" id="day-root">
       <header class="day-hero">
-        <a class="back" href="../index.html">← Índice</a>
+        <nav class="day-nav" aria-label="Navegación del itinerario">
+          <a class="back" href="../index.html">← Índice</a>
+          <span id="day-nav-neighbors"></span>
+        </nav>
         <p class="eyebrow" id="day-date" style="margin-top:1rem;"></p>
         <h1 id="day-title">{title}</h1>
         <p id="day-summary" style="color:var(--muted);max-width:40rem;"></p>
