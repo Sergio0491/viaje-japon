@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Domingo 2026-11-01 — Tokio (Día 3) · Viaje Japón</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Zen+Old+Mincho:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="../css/theme.css" />
+  </head>
+  <body data-date="2026-11-01">
+    <main class="wrap" id="day-root">
+      <header class="day-hero">
+        <a class="back" href="../index.html">← Índice</a>
+        <p class="eyebrow" id="day-date" style="margin-top:1rem;"></p>
+        <h1 id="day-title">Domingo 2026-11-01 — Tokio (Día 3)</h1>
+        <p id="day-summary" style="color:var(--muted);max-width:40rem;"></p>
+        <div class="stats">
+          <div class="stat"><div class="label">Ciudad</div><div class="value" id="stat-city">—</div></div>
+          <div class="stat"><div class="label">Hotel</div><div class="value" id="stat-hotel">—</div></div>
+          <div class="stat"><div class="label">Total / pers. (JPY)</div><div class="value" id="stat-jpy">—</div></div>
+          <div class="stat"><div class="label">Total / pers. (COP)</div><div class="value" id="stat-cop">—</div></div>
+        </div>
+        <div class="maps-warn" id="maps-warn" hidden></div>
+        <div id="day-map" aria-label="Mapa del día"></div>
+      </header>
+
+      <section class="events" id="events" aria-label="Eventos del día"></section>
+
+      <footer class="site-footer">
+        Abrí cada evento (tocá la fila ▾) para ver mapa, ruta, costos y qué llevar.
+        · <a href="../auditoria.html">Informe de auditoría</a>
+      </footer>
+    </main>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script type="module" src="../js/day.js"></script>
+  </body>
+</html>

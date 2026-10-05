@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Viaje Japón · Grupo de 8</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Zen+Old+Mincho:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/theme.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="site-header">
+        <p class="eyebrow">Itinerario · Akihabara Dream</p>
+        <h1>Japón · grupo de 8</h1>
+        <p class="lede" id="lede">Cargando fechas…</p>
+        <p class="filter-label">Filtrar por persona <span class="filter-hint">(podés elegir varias)</span></p>
+        <ul class="travelers" id="travelers" aria-label="Filtro por viajero"></ul>
+        <p class="filter-status" id="filter-status"></p>
+      </header>
+
+      <div class="legend">
+        <span><span class="badge inferred">Horario inferido</span> estimado</span>
+        <span><span class="badge partial">No todos van</span> participantes parciales</span>
+        <span><span class="badge ready">Listo</span> reserva/entrada OK</span>
+        <span><span class="badge needs_reservation">Hay que reservar</span></span>
+        <span><span class="badge needs_ticket">Falta comprar entrada</span></span>
+        <span><span class="badge walk_in">Sin reserva</span> walk-in</span>
+        <span><span class="badge flag flag-critical">critical</span> riesgo / gap</span>
+        <a href="./auditoria.html" style="margin-left:auto;">Ver auditoría completa →</a>
+      </div>
+
+      <ol class="day-list" id="day-list"></ol>
+
+      <footer class="site-footer">
+        Fuente: Excel del grupo · sitio local estático · mapas Leaflet + OpenStreetMap.
+        · <a href="./auditoria.html">Auditoría del cronograma</a>
+        · <a href="./decisiones-grupo.md">Decisiones del grupo</a>
+      </footer>
+    </main>
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Auditoría del itinerario · Viaje Japón</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Zen+Old+Mincho:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/theme.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="site-header">
+        <p class="eyebrow">Control de calidad · cronograma</p>
+        <h1>Auditoría del itinerario</h1>
+        <p class="lede" id="audit-lede">
+          Hallazgos por severidad. Lo corregible ya está en los datos; lo dudoso queda señalado.
+        </p>
+        <p><a class="back" href="./index.html">← Índice del viaje</a></p>
+      </header>
+
+      <div class="audit-counts" id="audit-counts" aria-live="polite"></div>
+
+      <section class="audit-sections" id="audit-sections"></section>
+
+      <footer class="site-footer">
+        Generado con el itinerario · no inventa reservas · ver también
+        <a href="./data/audit.json">audit.json</a>
+      </footer>
+    </main>
+    <script type="module" src="./js/audit.js"></script>
+  </body>
+</html>

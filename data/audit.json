@@ -1,0 +1,586 @@
+{
+  "generatedFor": "itinerary expert audit",
+  "counts": {
+    "critical": 10,
+    "high": 37,
+    "medium": 15,
+    "low": 1
+  },
+  "flags": {
+    "critical": [
+      {
+        "date": "2026-11-04",
+        "dayTitle": "Miércoles 2026-11-04 — Kawaguchiko → Kioto (Día 6)",
+        "eventId": "2026-11-04-59-bus-estación-kawaguchiko-estación-mishima",
+        "eventTitle": "Bus estación Kawaguchiko - Estación Mishima",
+        "severity": "critical",
+        "code": "urgent_booking",
+        "message": "Bus Kawaguchiko→Mishima 14:00: reservar en Fujiyama Connect (~¥2500). Sin localizador aún."
+      },
+      {
+        "date": "2026-11-04",
+        "dayTitle": "Miércoles 2026-11-04 — Kawaguchiko → Kioto (Día 6)",
+        "eventId": "2026-11-04-62-hotel-en-kioto",
+        "eventTitle": "Hotel en Kioto",
+        "severity": "critical",
+        "code": "confirm_payment",
+        "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
+      },
+      {
+        "date": "2026-11-05",
+        "dayTitle": "Jueves 2026-11-05 — Kioto (Día 7)",
+        "eventId": "2026-11-05-79-hotel-en-kioto",
+        "eventTitle": "Hotel en Kioto",
+        "severity": "critical",
+        "code": "confirm_payment",
+        "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
+      },
+      {
+        "date": "2026-11-10",
+        "dayTitle": "Martes 2026-11-10 — Osaka (Día 12)",
+        "eventId": "2026-11-10-130-dia-comodin-universal-studios-japan-o-tour-himej",
+        "eventTitle": "Dia Comodin: Universal Studios Japan o tour Himeji-Kobe o alguna otra cosa en Osaka (acuario por ejemplo)",
+        "severity": "critical",
+        "code": "underspecified",
+        "message": "USJ modelado demasiado corto en Excel — tratar como día completo / comodín, no bloque de 90 min."
+      },
+      {
+        "date": "2026-11-11",
+        "dayTitle": "Miércoles 2026-11-11 — Osaka → Nagoya → Kanazawa (Día 13)",
+        "eventId": "2026-11-11-139-hotel-en-kanazawa-airbnb",
+        "eventTitle": "Hotel en Kanazawa - Airbnb",
+        "severity": "critical",
+        "code": "confirm_payment",
+        "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
+      },
+      {
+        "date": "2026-11-12",
+        "dayTitle": "Jueves 2026-11-12 — Kanazawa (Día 14)",
+        "eventId": "2026-11-12-148-hotel-en-kanazawa-airbnb",
+        "eventTitle": "Hotel en Kanazawa - Airbnb",
+        "severity": "critical",
+        "code": "confirm_payment",
+        "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
+      },
+      {
+        "date": "2026-11-14",
+        "dayTitle": "Sábado 2026-11-14 — Tokio (Día 16)",
+        "eventId": "2026-11-14-169-hotel-tokyo-2-hotel-yoyogi-uehara",
+        "eventTitle": "Hotel Tokyo 2 - Hotel Yoyogi Uehara",
+        "severity": "critical",
+        "code": "confirm_payment",
+        "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
+      },
+      {
+        "date": "2026-11-15",
+        "dayTitle": "Domingo 2026-11-15 — Tokio (Día 17)",
+        "eventId": "2026-11-15-180-hotel-tokyo-2-hotel-yoyogi-uehara",
+        "eventTitle": "Hotel Tokyo 2 - Hotel Yoyogi Uehara",
+        "severity": "critical",
+        "code": "confirm_payment",
+        "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
+      },
+      {
+        "date": "2026-11-16",
+        "dayTitle": "Lunes 2026-11-16 — Tokio (Día 18)",
+        "eventId": "2026-11-16-188-hotel-tokyo-2-hotel-yoyogi-uehara",
+        "eventTitle": "Hotel Tokyo 2 - Hotel Yoyogi Uehara",
+        "severity": "critical",
+        "code": "confirm_payment",
+        "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
+      },
+      {
+        "date": "2026-11-17",
+        "dayTitle": "Martes 2026-11-17 — Tokio (Día 19)",
+        "eventId": "2026-11-17-196-hotel-tokyo-2-hotel-yoyogi-uehara",
+        "eventTitle": "Hotel Tokyo 2 - Hotel Yoyogi Uehara",
+        "severity": "critical",
+        "code": "confirm_payment",
+        "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
+      }
+    ],
+    "high": [
+      {
+        "date": "2026-11-03",
+        "dayTitle": "Martes 2026-11-03 — Fujiyoshida / Kawaguchiko (Día 5)",
+        "eventId": "2026-11-03-44-tren-fuji-excursion-3-tokyo-kawaguchiko",
+        "eventTitle": "Tren Fuji-Excursion 3 Tokyo - Kawaguchiko",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 37 min < trayecto estimado 150 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-03",
+        "dayTitle": "Martes 2026-11-03 — Fujiyoshida / Kawaguchiko (Día 5)",
+        "eventId": "2026-11-03-47-parque-de-oishi-si-estamos-cansados-o-da-pereza-",
+        "eventTitle": "Parque de Oishi (si estamos cansados o da pereza esta se puede obviar)",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 18 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-04",
+        "dayTitle": "Miércoles 2026-11-04 — Kawaguchiko → Kioto (Día 6)",
+        "eventId": "2026-11-04-56-calle-comercial-retro-fujiyoshida-bajar-caminand",
+        "eventTitle": "Calle comercial retro Fujiyoshida (bajar caminando)",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 26 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-04",
+        "dayTitle": "Miércoles 2026-11-04 — Kawaguchiko → Kioto (Día 6)",
+        "eventId": "2026-11-04-57-santuario-kitaguchi-hongu-fuji-sengen-con-almuer",
+        "eventTitle": "Santuario Kitaguchi Hongu Fuji Sengen con almuerzo",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 18 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-04",
+        "dayTitle": "Miércoles 2026-11-04 — Kawaguchiko → Kioto (Día 6)",
+        "eventId": "2026-11-04-58-bus-a-estacion-kawaguchiko",
+        "eventTitle": "Bus a estacion Kawaguchiko",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 22 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-04",
+        "dayTitle": "Miércoles 2026-11-04 — Kawaguchiko → Kioto (Día 6)",
+        "eventId": "2026-11-04-59-bus-estación-kawaguchiko-estación-mishima",
+        "eventTitle": "Bus estación Kawaguchiko - Estación Mishima",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 90 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-04",
+        "dayTitle": "Miércoles 2026-11-04 — Kawaguchiko → Kioto (Día 6)",
+        "eventId": "2026-11-04-60-shinkansen-mishima-kioto",
+        "eventTitle": "Shinkansen Mishima - Kioto",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 120 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-05",
+        "dayTitle": "Jueves 2026-11-05 — Kioto (Día 7)",
+        "eventId": "2026-11-05-67-bosque-de-bambú-de-arashiyama",
+        "eventTitle": "Bosque de Bambú de Arashiyama",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 31 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-05",
+        "dayTitle": "Jueves 2026-11-05 — Kioto (Día 7)",
+        "eventId": "2026-11-05-68-templo-tenryu-ji",
+        "eventTitle": "Templo Tenryu-ji",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 10 min < trayecto estimado 8 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-05",
+        "dayTitle": "Jueves 2026-11-05 — Kioto (Día 7)",
+        "eventId": "2026-11-05-69-taxi-tenryu-ji-otagi-nenbutsuji",
+        "eventTitle": "Taxi Tenryu-ji-Otagi Nenbutsuji",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 31 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-05",
+        "dayTitle": "Jueves 2026-11-05 — Kioto (Día 7)",
+        "eventId": "2026-11-05-70-otagi-nenbutsuji",
+        "eventTitle": "Otagi Nenbutsuji",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 18 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-05",
+        "dayTitle": "Jueves 2026-11-05 — Kioto (Día 7)",
+        "eventId": "2026-11-05-71-bajada-caminando-bonita-o-taxi-go-taxi-o-uber-al",
+        "eventTitle": "Bajada caminando (bonita) o taxi (GO Taxi o Uber) al pabellon",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 20 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-05",
+        "dayTitle": "Jueves 2026-11-05 — Kioto (Día 7)",
+        "eventId": "2026-11-05-72-kinkaku-ji-el-pabellón-dorado-almorzamos-cerca-d",
+        "eventTitle": "Kinkaku-ji (El Pabellón Dorado) (almorzamos cerca de aca",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 5 min < trayecto estimado 15 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-05",
+        "dayTitle": "Jueves 2026-11-05 — Kioto (Día 7)",
+        "eventId": "2026-11-05-74-castillo-nij",
+        "eventTitle": "Castillo Nijō",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 20 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-05",
+        "dayTitle": "Jueves 2026-11-05 — Kioto (Día 7)",
+        "eventId": "2026-11-05-78-calle-pontocho-aca-cenamos",
+        "eventTitle": "Calle Pontocho (aca cenamos)",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 5 min < trayecto estimado 18 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-06",
+        "dayTitle": "Viernes 2026-11-06 — Kioto (Día 8)",
+        "eventId": "2026-11-06-85-templo-kiyomizu-dera",
+        "eventTitle": "Templo Kiyomizu-dera",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 21 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-06",
+        "dayTitle": "Viernes 2026-11-06 — Kioto (Día 8)",
+        "eventId": "2026-11-06-86-descenso-por-sannenzaka-y-ninenzaka",
+        "eventTitle": "Descenso por Sannenzaka y Ninenzaka",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 9 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-06",
+        "dayTitle": "Viernes 2026-11-06 — Kioto (Día 8)",
+        "eventId": "2026-11-06-87-pagoda-h-kan-ji-torre-yasaka",
+        "eventTitle": "Pagoda Hōkan-ji (Torre Yasaka)",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 8 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-06",
+        "dayTitle": "Viernes 2026-11-06 — Kioto (Día 8)",
+        "eventId": "2026-11-06-88-higashiyama-aca-almorzamos",
+        "eventTitle": "Higashiyama (aca almorzamos)",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 8 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-06",
+        "dayTitle": "Viernes 2026-11-06 — Kioto (Día 8)",
+        "eventId": "2026-11-06-89-barrio-de-gion-y-santuario-yasaka-calle-hanami-k",
+        "eventTitle": "Barrio de Gion y Santuario Yasaka (calle Hanami-koji, zona del canal de Shirakawa)",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 11 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-06",
+        "dayTitle": "Viernes 2026-11-06 — Kioto (Día 8)",
+        "eventId": "2026-11-06-90-transporte-kioto-osaka",
+        "eventTitle": "Transporte Kioto - Osaka",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 15 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-07",
+        "dayTitle": "Sábado 2026-11-07 — Osaka (Día 9)",
+        "eventId": "2026-11-07-97-nipponbashi-den-den-town",
+        "eventTitle": "Nipponbashi / Den Den Town",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 15 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-07",
+        "dayTitle": "Sábado 2026-11-07 — Osaka (Día 9)",
+        "eventId": "2026-11-07-98-shitenn-ji",
+        "eventTitle": "Shitennō-ji",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 23 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-07",
+        "dayTitle": "Sábado 2026-11-07 — Osaka (Día 9)",
+        "eventId": "2026-11-07-99-tennoji-park",
+        "eventTitle": "Tennoji Park",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 13 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-07",
+        "dayTitle": "Sábado 2026-11-07 — Osaka (Día 9)",
+        "eventId": "2026-11-07-100-abeno-harukas",
+        "eventTitle": "Abeno Harukas",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 11 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-07",
+        "dayTitle": "Sábado 2026-11-07 — Osaka (Día 9)",
+        "eventId": "2026-11-07-101-barrio-shinsekai-ir-a-dotonbori-si-tenemos-energ",
+        "eventTitle": "Barrio Shinsekai (Ir a DotonBori si tenemos energía)",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 19 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-08",
+        "dayTitle": "Domingo 2026-11-08 — Osaka (Día 10)",
+        "eventId": "2026-11-08-108-templo-t-dai-ji",
+        "eventTitle": "Templo Tōdai-ji",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 68 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-08",
+        "dayTitle": "Domingo 2026-11-08 — Osaka (Día 10)",
+        "eventId": "2026-11-08-109-parque-nara-y-venados-sika",
+        "eventTitle": "Parque Nara y Venados Sika",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 68 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-08",
+        "dayTitle": "Domingo 2026-11-08 — Osaka (Día 10)",
+        "eventId": "2026-11-08-110-santuario-kasuga-taisha-por-esta-zona-almorzamos",
+        "eventTitle": "Santuario Kasuga-Taisha (por esta zona almorzamos). Regresar en bus a la estacion",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 19 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-08",
+        "dayTitle": "Domingo 2026-11-08 — Osaka (Día 10)",
+        "eventId": "2026-11-08-111-transporte-a-osaka",
+        "eventTitle": "Transporte a Osaka",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 15 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-09",
+        "dayTitle": "Lunes 2026-11-09 — Osaka (Día 11)",
+        "eventId": "2026-11-09-118-fushimi-inari-taisha-sembon-torii-subir-hasta-mi",
+        "eventTitle": "Fushimi Inari Taisha (Sembon Torii)  Subir hasta mirador Yotsuyi",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 24 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-09",
+        "dayTitle": "Lunes 2026-11-09 — Osaka (Día 11)",
+        "eventId": "2026-11-09-119-transporte-fushimi-daigoji",
+        "eventTitle": "Transporte Fushimi-Daigoji",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 24 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-09",
+        "dayTitle": "Lunes 2026-11-09 — Osaka (Día 11)",
+        "eventId": "2026-11-09-120-templo-daigo-ji",
+        "eventTitle": "Templo Daigo-ji",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 24 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-09",
+        "dayTitle": "Lunes 2026-11-09 — Osaka (Día 11)",
+        "eventId": "2026-11-09-121-transporte-daigoji-kyoto-ramen-koji",
+        "eventTitle": "Transporte Daigoji-Kyoto Ramen Koji",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 35 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-09",
+        "dayTitle": "Lunes 2026-11-09 — Osaka (Día 11)",
+        "eventId": "2026-11-09-122-kyoto-ramen-koji-almuerzo-en-la-estación-de-kiot",
+        "eventTitle": "Kyoto Ramen Koji (almuerzo en la estación de Kioto)",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 30 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-09",
+        "dayTitle": "Lunes 2026-11-09 — Osaka (Día 11)",
+        "eventId": "2026-11-09-123-exploracion",
+        "eventTitle": "Exploracion",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 15 min + 10. Revisar orden o recortar."
+      },
+      {
+        "date": "2026-11-09",
+        "dayTitle": "Lunes 2026-11-09 — Osaka (Día 11)",
+        "eventId": "2026-11-09-124-teamlabs-biovortex",
+        "eventTitle": "Teamlabs Biovortex",
+        "severity": "high",
+        "code": "tight_buffer",
+        "message": "Hueco 0 min < trayecto estimado 8 min + 10. Revisar orden o recortar."
+      }
+    ],
+    "medium": [
+      {
+        "date": "2026-11-02",
+        "dayTitle": "Lunes 2026-11-02 — Tokio (Día 4)",
+        "eventId": null,
+        "eventTitle": null,
+        "severity": "medium",
+        "code": "confirm_dropoff",
+        "message": "Sueño resuelto si Tokyo Turismo los deja en el Tobu Levant (Kinshicho), no solo en Shibuya. Pedirlo por WhatsApp al +81 90 8383 5525. Tour 17:30–~21:30, GYGFWVYL2943."
+      },
+      {
+        "date": "2026-11-02",
+        "dayTitle": "Lunes 2026-11-02 — Tokio (Día 4)",
+        "eventId": null,
+        "eventTitle": null,
+        "severity": "medium",
+        "code": "zigzag",
+        "message": "Los ocho van a Roppongi hasta las 16:15. Después: tour (Sergio, Arley, Pipe, Johan) o Torre (el resto). La vuelta al hotel es un trayecto aparte."
+      },
+      {
+        "date": "2026-11-02",
+        "dayTitle": "Lunes 2026-11-02 — Tokio (Día 4)",
+        "eventId": "2026-11-02-daikoku",
+        "eventTitle": "Tour JDM Fast & Furious — Daikoku",
+        "severity": "medium",
+        "code": "confirm_dropoff",
+        "message": "Sueño resuelto si Tokyo Turismo los deja en el Tobu Levant (Kinshicho), no solo en Shibuya. Pedirlo por WhatsApp al +81 90 8383 5525. Tour 17:30–~21:30, GYGFWVYL2943."
+      },
+      {
+        "date": "2026-11-05",
+        "dayTitle": "Jueves 2026-11-05 — Kioto (Día 7)",
+        "eventId": null,
+        "eventTitle": null,
+        "severity": "medium",
+        "code": "packed_day",
+        "message": "Arashiyama → Otagi → Kinkaku → Nijo: día largo clásico; priorizar y recortar si hace falta."
+      },
+      {
+        "date": "2026-11-08",
+        "dayTitle": "Domingo 2026-11-08 — Osaka (Día 10)",
+        "eventId": "2026-11-08-107-transporte-del-hotel-a-estacion-kintetsu-nara",
+        "eventTitle": "Transporte del hotel a estacion Kintetsu-Nara",
+        "severity": "medium",
+        "code": "tight",
+        "message": "Hotel→Nara temprano: dejar buffer de metro; 08:00 en Tōdai-ji es justo."
+      },
+      {
+        "date": "2026-11-08",
+        "dayTitle": "Domingo 2026-11-08 — Osaka (Día 10)",
+        "eventId": "2026-11-08-108-templo-t-dai-ji",
+        "eventTitle": "Templo Tōdai-ji",
+        "severity": "medium",
+        "code": "tight",
+        "message": "Hotel→Nara temprano: dejar buffer de metro; 08:00 en Tōdai-ji es justo."
+      },
+      {
+        "date": "2026-11-09",
+        "dayTitle": "Lunes 2026-11-09 — Osaka (Día 11)",
+        "eventId": "2026-11-09-117-transporte-osaka-fushimi-inari-ida-y-vuelta",
+        "eventTitle": "Transporte Osaka - Fushimi-inari (ida y vuelta)",
+        "severity": "medium",
+        "code": "tight",
+        "message": "Fushimi + Daigo + Biovortex 14:30: viable si se recorta Daigo."
+      },
+      {
+        "date": "2026-11-09",
+        "dayTitle": "Lunes 2026-11-09 — Osaka (Día 11)",
+        "eventId": "2026-11-09-118-fushimi-inari-taisha-sembon-torii-subir-hasta-mi",
+        "eventTitle": "Fushimi Inari Taisha (Sembon Torii)  Subir hasta mirador Yotsuyi",
+        "severity": "medium",
+        "code": "tight",
+        "message": "Fushimi + Daigo + Biovortex 14:30: viable si se recorta Daigo."
+      },
+      {
+        "date": "2026-11-09",
+        "dayTitle": "Lunes 2026-11-09 — Osaka (Día 11)",
+        "eventId": "2026-11-09-119-transporte-fushimi-daigoji",
+        "eventTitle": "Transporte Fushimi-Daigoji",
+        "severity": "medium",
+        "code": "tight",
+        "message": "Fushimi + Daigo + Biovortex 14:30: viable si se recorta Daigo."
+      },
+      {
+        "date": "2026-11-09",
+        "dayTitle": "Lunes 2026-11-09 — Osaka (Día 11)",
+        "eventId": "2026-11-09-120-templo-daigo-ji",
+        "eventTitle": "Templo Daigo-ji",
+        "severity": "medium",
+        "code": "tight",
+        "message": "Fushimi + Daigo + Biovortex 14:30: viable si se recorta Daigo."
+      },
+      {
+        "date": "2026-11-09",
+        "dayTitle": "Lunes 2026-11-09 — Osaka (Día 11)",
+        "eventId": "2026-11-09-121-transporte-daigoji-kyoto-ramen-koji",
+        "eventTitle": "Transporte Daigoji-Kyoto Ramen Koji",
+        "severity": "medium",
+        "code": "tight",
+        "message": "Fushimi + Daigo + Biovortex 14:30: viable si se recorta Daigo."
+      },
+      {
+        "date": "2026-11-09",
+        "dayTitle": "Lunes 2026-11-09 — Osaka (Día 11)",
+        "eventId": "2026-11-09-124-teamlabs-biovortex",
+        "eventTitle": "Teamlabs Biovortex",
+        "severity": "medium",
+        "code": "tight",
+        "message": "Fushimi + Daigo + Biovortex 14:30: viable si se recorta Daigo."
+      },
+      {
+        "date": "2026-11-11",
+        "dayTitle": "Miércoles 2026-11-11 — Osaka → Nagoya → Kanazawa (Día 13)",
+        "eventId": null,
+        "eventTitle": null,
+        "severity": "medium",
+        "code": "transfer_only",
+        "message": "Nagoya ~5 h entre trenes — escala de conexión, no sightseeing inventado."
+      },
+      {
+        "date": "2026-11-15",
+        "dayTitle": "Domingo 2026-11-15 — Tokio (Día 17)",
+        "eventId": "2026-11-15-174-santuario-meiji-jingu-por-la-mañana-festival-shi",
+        "eventTitle": "Santuario Meiji Jingu por la mañana (Festival Shichi-Go-San con niños en kimono)",
+        "severity": "medium",
+        "code": "crowded",
+        "message": "Meiji en Shichi-Go-San: muchedumbre esperada; llegar temprano o acortar."
+      },
+      {
+        "date": "2026-11-18",
+        "dayTitle": "Miércoles 2026-11-18 — Tokio → LAX (Día 20)",
+        "eventId": "2026-11-18-alaska",
+        "eventTitle": "Haneda → Osaka → Los Ángeles (Alaska/JAL)",
+        "severity": "medium",
+        "code": "crosses_midnight",
+        "message": "Horario de llegada en LA es del día calendario siguiente (cruza medianoche). No es un error de end<start."
+      }
+    ],
+    "low": [
+      {
+        "date": "2026-11-03",
+        "dayTitle": "Martes 2026-11-03 — Fujiyoshida / Kawaguchiko (Día 5)",
+        "eventId": "2026-11-03-44-tren-fuji-excursion-3-tokyo-kawaguchiko",
+        "eventTitle": "Tren Fuji-Excursion 3 Tokyo - Kawaguchiko",
+        "severity": "low",
+        "code": "sleep_risk",
+        "message": "Resuelto: el tour del 2 termina ~21:30. Omitir Oishi si queda cansancio. Yamato ~05:45 y tren 07:07 siguen en pie."
+      }
+    ]
+  }
+}
