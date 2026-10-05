@@ -8,20 +8,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Zen+Old+Mincho:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+JP:wght@500;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/theme.css" />
   </head>
   <body>
     <main class="wrap">
-      <header class="site-header">
-        <p class="eyebrow">Itinerario · Akihabara Dream</p>
-        <h1>Japón · grupo de 8</h1>
-        <p class="lede" id="lede">Cargando fechas…</p>
-        <p class="filter-label">Filtrar por persona <span class="filter-hint">(podés elegir varias)</span></p>
-        <ul class="travelers" id="travelers" aria-label="Filtro por viajero"></ul>
-        <p class="filter-status" id="filter-status"></p>
+      <header class="site-header trip-hero">
+        <div class="trip-hero-copy">
+          <p class="eyebrow">Bitácora de ruta · 2026</p>
+          <h1><span>日本</span> Japón,<br />sin perder el tren</h1>
+          <p class="lede" id="lede">Cargando fechas…</p>
+          <div class="trip-pulse" aria-live="polite">
+            <strong id="trip-countdown">21 días</strong>
+            <span id="trip-countdown-label">de ruta para ocho viajeros</span>
+          </div>
+          <div class="traveler-filter">
+            <p class="filter-label">¿De quién quieres ver el plan? <span class="filter-hint">Puedes elegir varias personas</span></p>
+            <ul class="travelers" id="travelers" aria-label="Filtro por viajero"></ul>
+            <p class="filter-status" id="filter-status"></p>
+          </div>
+        </div>
+        <figure class="trip-hero-photo">
+          <img src="./img/mt-fuji.jpg" alt="Monte Fuji reflejado en el lago Kawaguchi" />
+          <figcaption>
+            <span>東京</span>
+            <i aria-hidden="true"></i>
+            <span>富士</span>
+            <i aria-hidden="true"></i>
+            <span>京都</span>
+            <i aria-hidden="true"></i>
+            <span>金沢</span>
+          </figcaption>
+        </figure>
       </header>
 
       <div class="legend">
@@ -32,9 +52,13 @@
         <span><span class="badge needs_ticket">Falta comprar entrada</span></span>
         <span><span class="badge walk_in">Sin reserva</span> walk-in</span>
         <span><span class="badge flag flag-critical">critical</span> riesgo / gap</span>
-        <a href="./auditoria.html" style="margin-left:auto;">Ver auditoría completa →</a>
+        <a class="legend-audit" href="./auditoria.html">Ver auditoría →</a>
       </div>
 
+      <div class="route-heading">
+        <p class="eyebrow">La ruta completa</p>
+        <h2>Veintiún días, parada por parada</h2>
+      </div>
       <ol class="day-list" id="day-list"></ol>
 
       <footer class="site-footer">

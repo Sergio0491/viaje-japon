@@ -88,6 +88,7 @@ function renderDays() {
 
   listEl.innerHTML = visible
     .map((day) => {
+      const dayIndex = state.days.findIndex((item) => item.date === day.date);
       const events = filteredEvents(day, state.selected);
       const href = `./dias/${day.date}.html${q}`;
       const total =
@@ -108,11 +109,15 @@ function renderDays() {
         : hasHigh
           ? '<span class="badge flag flag-high">revisar</span>'
           : "";
-      return `<li>
+      return `<li class="day-stop">
         <a href="${href}">
-          <span class="date">${formatDateEs(day.date)}</span>
-          <div>
-            <h2>${escapeHtml(day.title)} ${flagChip}</h2>
+          <span class="route-marker" aria-hidden="true"><b>${String(dayIndex).padStart(2, "0")}</b></span>
+          <div class="day-copy">
+            <div class="day-kicker">
+              <span class="date">${formatDateEs(day.date)}</span>
+              <span class="city">${escapeHtml(day.city || "")}</span>
+            </div>
+            <h2>Día ${dayIndex}: ${escapeHtml(day.city || "En ruta")} ${flagChip}</h2>
             <p>${escapeHtml(day.summary || day.city || "")}${
               countLabel
                 ? ` · <span class="day-match-count">${countLabel}</span>`
@@ -137,7 +142,28 @@ async function main() {
 
   const ledeEl = document.getElementById("lede");
   if (ledeEl) {
-    ledeEl.textContent = `${formatDateEs(meta.startDate)} — ${formatDateEs(meta.endDate)} · Tipo de cambio Excel: ¥1 = $${meta.fxJPY_to_COP} COP`;
+    ledeEl.textContent = `${formatDateEs(meta.startDate)} — ${formatDateEs(meta.endDate)} · Tokio, Fuji, Kansai y Kanazawa`;
+  }
+
+  const countdown = document.getElementById("trip-countdown");
+  const countdownLabel = document.getElementById("trip-countdown-label");
+  if (countdown && countdownLabel) {
+    const today = new Date();
+    today.setHours(12, 0, 0, 0);
+    const start = new Date(`${meta.startDate}T12:00:00`);
+    const end = new Date(`${meta.endDate}T12:00:00`);
+    const daysUntil = Math.ceil((start - today) / 86400000);
+    if (daysUntil > 0) {
+      countdown.textContent = `${daysUntil} día${daysUntil === 1 ? "" : "s"}`;
+      countdownLabel.textContent = "para empezar la ruta";
+    } else if (today <= end) {
+      const currentDay = Math.floor((today - start) / 86400000) + 1;
+      countdown.textContent = `Día ${currentDay} de 21`;
+      countdownLabel.textContent = "estamos en Japón";
+    } else {
+      countdown.textContent = "21 días";
+      countdownLabel.textContent = "de recuerdos en Japón";
+    }
   }
 
   renderFilters();

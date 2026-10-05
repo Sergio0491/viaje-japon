@@ -528,6 +528,18 @@ async function main() {
   document.getElementById("day-title").textContent = day.title;
   document.getElementById("day-date").textContent = formatDateEs(day.date);
   document.getElementById("day-summary").textContent = day.summary || "";
+  const coverEvent =
+    events.find((event) => event.category === "visita" && event.image) ||
+    events.find((event) => event.image);
+  const cover = document.getElementById("day-cover");
+  if (cover && coverEvent) {
+    const coverImage = document.getElementById("day-cover-image");
+    const coverCaption = document.getElementById("day-cover-caption");
+    coverImage.src = coverEvent.image;
+    coverImage.alt = coverEvent.title;
+    coverCaption.textContent = `${day.city || "En ruta"} · ${coverEvent.title}`;
+    cover.hidden = false;
+  }
   document.getElementById("stat-city").textContent = day.city || "—";
   document.getElementById("stat-hotel").textContent =
     day.hotel?.name || day.hotel?.group || "—";
