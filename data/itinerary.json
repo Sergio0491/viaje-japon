@@ -48,7 +48,44 @@
       }
     ],
     "source": "Excel Sebastián + reservas Gmail + ajustes Sergio/Arley",
-    "generatedAt": "2026-10-05T18:59:06",
+    "bookingLadder": [
+      {
+        "when": "Ahora",
+        "title": "Shinkansen Mishima → Kioto, 4 nov",
+        "detail": "La venta general de Smart-EX abrió el 4 oct a las 10:00 JST. Sigue sin localizador. La Suica no cubre este asiento.",
+        "href": "https://smart-ex.jp/en/",
+        "linkLabel": "Smart-EX"
+      },
+      {
+        "when": "11 oct, 10:00 JST",
+        "title": "Shinkansen Osaka → Nagoya, 11 nov",
+        "detail": "Misma ventana: un mes antes, a las 10:00 JST. También es Tokaido, así que va en Smart-EX.",
+        "href": "https://smart-ex.jp/en/",
+        "linkLabel": "Smart-EX"
+      },
+      {
+        "when": "11 oct, 10:00 JST",
+        "title": "Limited Express Shirasagi, 11 nov",
+        "detail": "No se compra en Smart-EX. Es un tren de JR West: reservar en eki-net o en el mostrador de JR West el mismo día que abre la ventana.",
+        "href": "https://www.eki-net.com/en/",
+        "linkLabel": "eki-net"
+      },
+      {
+        "when": "14 oct, 10:00 JST",
+        "title": "Shinkansen Kanazawa → Tokio, 14 nov",
+        "detail": "Es el Hokuriku, fuera de Smart-EX. Reservar en eki-net. Van con mochila, así que no hace falta asiento de maleta grande.",
+        "href": "https://www.eki-net.com/en/",
+        "linkLabel": "eki-net"
+      },
+      {
+        "when": "Noche del 2 nov",
+        "title": "Yamato de las maletas hacia Osaka",
+        "detail": "El envío es para el día siguiente. Dejarlas a las 05:45 del 3 nov no alcanza: el mostrador todavía no abre. Reservar la recogida la noche del 2.",
+        "href": "./dias/2026-11-03.html",
+        "linkLabel": "Ver el día"
+      }
+    ],
+    "generatedAt": "2026-10-05T19:33:20",
     "auditCounts": {
       "critical": 10,
       "high": 37,
@@ -3344,7 +3381,7 @@
       "weekday": "martes",
       "title": "Martes 2026-11-03 — Fujiyoshida / Kawaguchiko (Día 5)",
       "city": "Fujiyoshida / Kawaguchiko",
-      "summary": "Fuji Excursion E90632 sale 07:07 desde Kinshicho (llegada Kawaguchiko 09:28). Ropeway, pueblo, onsen Yurari. Oishi es prescindible si hay cansancio post-Daikoku. Antes: enviar maletas a Osaka con Yamato. El tour del 2 termina ~21:30 si el regreso es al hotel. Oishi se omite si hay cansancio.",
+      "summary": "Festivo en Japón (Día de la Cultura, 3 nov). El Fuji Excursion de las 07:07 y el teleférico van más llenos. Las maletas a Osaka se reservan la noche del 2, no a las 05:45.",
       "mapCenter": {
         "name": "Estación Kawaguchiko",
         "query": "Kawaguchiko Station",
@@ -3367,7 +3404,7 @@
           "track": "all",
           "endOfDay": false,
           "flags": [],
-          "description": "Dejar maletas grandes en un Yamato / counter de envío antes del tren. Recogida en Osaka el 6 nov. Ir a Kawaguchiko y Kioto solo con mochila.",
+          "description": "Dejar maletas grandes en un Yamato / counter de envío antes del tren. Recogida en Osaka el 6 nov. Ir a Kawaguchiko y Kioto solo con mochila. Reservar Yamato la noche del 2 de noviembre. Un envío hotel a hotel sale al día siguiente y el mostrador de las 05:45 aún no atiende.",
           "from": {
             "name": "Estación Kawaguchiko",
             "query": "Kawaguchiko Station",
@@ -4200,7 +4237,7 @@
       "weekday": "miércoles",
       "title": "Miércoles 2026-11-04 — Kawaguchiko → Kioto (Día 6)",
       "city": "Kawaguchiko → Kioto",
-      "summary": "8 paradas · Empieza con Pagoda Chureito.",
+      "summary": "El ancla es el bus de las 14:00 a Mishima, todavía sin reservar. La calle y el santuario de la mañana se saltan si van tarde. El Shinkansen Mishima–Kioto ya se puede comprar en Smart-EX.",
       "mapCenter": {
         "name": "Estación Kawaguchiko",
         "query": "Kawaguchiko Station",
@@ -4318,7 +4355,7 @@
               "message": "Hueco 0 min < trayecto estimado 26 min + 10. Revisar orden o recortar."
             }
           ],
-          "description": "Bajar por la calle comercial y buscar las vistas del Fuji entre fachadas. Mantener libre la calzada para las fotos.",
+          "description": "Bajar por la calle comercial y buscar las vistas del Fuji entre fachadas. Mantener libre la calzada para las fotos. Bloque opcional. Si salen tarde del hotel, se salta: el bus de las 14:00 no se mueve.",
           "from": {
             "name": "Pagoda Chureito",
             "query": "Chureito Pagoda Fujiyoshida",
@@ -4406,7 +4443,7 @@
               "message": "Hueco 0 min < trayecto estimado 18 min + 10. Revisar orden o recortar."
             }
           ],
-          "description": "Recorrer el acceso, el gran torii y el santuario. Almorzar cerca antes de iniciar los traslados a Kioto.",
+          "description": "Recorrer el acceso, el gran torii y el santuario. Almorzar cerca antes de iniciar los traslados a Kioto. Bloque opcional. Si salen tarde del hotel, se salta: el bus de las 14:00 no se mueve.",
           "from": {
             "name": "Fujiyoshida retro shopping street",
             "query": "Honcho-dori Fujiyoshida",
@@ -4595,7 +4632,7 @@
               "message": "Hueco 0 min < trayecto estimado 90 min + 10. Revisar orden o recortar."
             }
           ],
-          "description": "Este es el enlace reservado hacia Mishima. Estar en la parada con el billete listo y no planear una conexión inmediata al bajar.",
+          "description": "Este es el enlace reservado hacia Mishima. Estar en la parada con el billete listo y no planear una conexión inmediata al bajar. Ancla del día. Reservar en Fujiyama Connect antes de salir de Tokio. Sin este asiento no hay Shinkansen.",
           "from": null,
           "to": {
             "name": "Estación Mishima",
@@ -4684,7 +4721,7 @@
               "message": "Hueco 0 min < trayecto estimado 120 min + 10. Revisar orden o recortar."
             }
           ],
-          "description": "Localizar el andén al llegar a Mishima y abordar con la reserva preparada. Comprar comida solo si queda margen real.",
+          "description": "Localizar el andén al llegar a Mishima y abordar con la reserva preparada. Comprar comida solo si queda margen real. Comprar ya en Smart-EX: la ventana general abrió el 4 oct a las 10:00 JST. La Suica no paga este tramo.",
           "from": null,
           "to": {
             "name": "Estación Mishima",
@@ -9205,7 +9242,7 @@
               "message": "Hueco 0 min < trayecto estimado 8 min + 10. Revisar orden o recortar."
             }
           ],
-          "description": "Llegar con la entrada preparada y seguir el recorrido de la instalación. Llevar calzado cómodo y teléfono cargado.",
+          "description": "Llegar con la entrada preparada y seguir el recorrido de la instalación. Llevar calzado cómodo y teléfono cargado. Es lunes, pero el cierre de museos no aplica: Fushimi y Daigo-ji abren, y esta entrada ya está comprada. Llegar 30 minutos antes.",
           "from": {
             "name": "Kyoto Station",
             "query": "Kyoto Station",
@@ -9623,7 +9660,7 @@
           "track": "all",
           "endOfDay": false,
           "flags": [],
-          "description": "Entregar las maletas grandes en el mostrador de Yamato y conservar el comprobante. Verificar nombre, alojamiento o punto de recogida y fecha de entrega antes de salir.",
+          "description": "Entregar las maletas grandes en el mostrador de Yamato y conservar el comprobante. Verificar nombre, alojamiento o punto de recogida y fecha de entrega antes de salir. Pedir el Yamato la noche del 10. El servicio es para el día siguiente y de aquí a Tokio van solo con mochila.",
           "from": {
             "name": "Hotel Kioto (Kariganecho)",
             "query": "409-1 Kariganecho Shimogyo Kyoto",
@@ -9706,7 +9743,7 @@
           "track": "all",
           "endOfDay": false,
           "flags": [],
-          "description": "Abordar con la reserva lista y llevar solo mochila. Al llegar, guardar equipaje antes de la escala de Nagoya.",
+          "description": "Abordar con la reserva lista y llevar solo mochila. Al llegar, guardar equipaje antes de la escala de Nagoya. Reservar el 11 oct a las 10:00 JST en Smart-EX. La Suica no cubre el asiento.",
           "from": {
             "name": "Hotel Kioto (Kariganecho)",
             "query": "409-1 Kariganecho Shimogyo Kyoto",
@@ -9889,7 +9926,7 @@
           "track": "all",
           "endOfDay": false,
           "flags": [],
-          "description": "Volver a la estación con margen, ubicar el andén y abordar con la reserva preparada. Llevar agua y algo ligero.",
+          "description": "Volver a la estación con margen, ubicar el andén y abordar con la reserva preparada. Llevar agua y algo ligero. No está en Smart-EX. Reservar el 11 oct a las 10:00 JST en eki-net o JR West.",
           "from": {
             "name": "Día en Nagoya",
             "query": "Día en Nagoya, Kyoto, Japan",
@@ -11220,7 +11257,7 @@
           "track": "all",
           "endOfDay": false,
           "flags": [],
-          "description": "Llegar temprano a Kanazawa Station y abordar con la reserva lista. Al llegar a Tokio, ir primero al alojamiento.",
+          "description": "Llegar temprano a Kanazawa Station y abordar con la reserva lista. Al llegar a Tokio, ir primero al alojamiento. Es el Shinkansen Hokuriku: no se compra en Smart-EX. Reservar el 14 oct a las 10:00 JST en eki-net.",
           "from": {
             "name": "Hotel Yoyogi Uehara",
             "query": "Hotel Yoyogi Uehara 17 Oyamacho Shibuya",

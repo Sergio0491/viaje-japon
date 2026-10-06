@@ -88,6 +88,28 @@ function renderFilterStatus() {
   status.textContent = `Filtro: ${names.join(", ")} · ${n} día${n === 1 ? "" : "s"} con eventos.`;
 }
 
+function renderBookingLadder(items) {
+  const section = document.getElementById("booking-ladder");
+  const list = document.getElementById("booking-ladder-list");
+  if (!section || !list) return;
+  if (!items?.length) {
+    section.hidden = true;
+    return;
+  }
+  section.hidden = false;
+  list.innerHTML = items
+    .map(
+      (item) => `<li>
+        <span class="when">${escapeHtml(item.when)}</span>
+        <div>
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(item.detail)} <a href="${escapeHtml(item.href)}">${escapeHtml(item.linkLabel)}</a></p>
+        </div>
+      </li>`
+    )
+    .join("");
+}
+
 function renderDays() {
   const listEl = document.getElementById("day-list");
   if (!listEl) return;
@@ -204,6 +226,7 @@ async function main() {
     }
   }
 
+  renderBookingLadder(meta.bookingLadder || []);
   renderFilters();
   renderFilterStatus();
   renderDays();

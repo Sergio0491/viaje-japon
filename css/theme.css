@@ -273,6 +273,43 @@ a:hover {
   font-weight: 600;
 }
 
+.booking-ladder {
+  margin: 0 0 2.2rem;
+}
+
+.booking-ladder ol {
+  list-style: none;
+  margin: 0.8rem 0 0;
+  padding: 0;
+}
+
+.booking-ladder li {
+  display: grid;
+  grid-template-columns: 9.5rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.booking-ladder .when {
+  color: var(--vermillion);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.booking-ladder h3 {
+  margin: 0 0 0.2rem;
+  font-family: var(--display);
+  font-size: 1.05rem;
+}
+
+.booking-ladder p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
 .route-heading {
   display: flex;
   align-items: end;
@@ -944,6 +981,10 @@ a:hover {
   .legend-audit {
     width: 100%;
     margin-left: 0;
+  }
+  .booking-ladder li {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
   }
   .route-heading {
     display: block;

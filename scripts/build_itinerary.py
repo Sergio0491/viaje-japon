@@ -1566,6 +1566,132 @@ def shape_nov2(d: dict) -> None:
     )
 
 
+BOOKING_LADDER = [
+    {
+        "when": "Ahora",
+        "title": "Shinkansen Mishima → Kioto, 4 nov",
+        "detail": "La venta general de Smart-EX abrió el 4 oct a las 10:00 JST. Sigue sin localizador. La Suica no cubre este asiento.",
+        "href": "https://smart-ex.jp/en/",
+        "linkLabel": "Smart-EX",
+    },
+    {
+        "when": "11 oct, 10:00 JST",
+        "title": "Shinkansen Osaka → Nagoya, 11 nov",
+        "detail": "Misma ventana: un mes antes, a las 10:00 JST. También es Tokaido, así que va en Smart-EX.",
+        "href": "https://smart-ex.jp/en/",
+        "linkLabel": "Smart-EX",
+    },
+    {
+        "when": "11 oct, 10:00 JST",
+        "title": "Limited Express Shirasagi, 11 nov",
+        "detail": "No se compra en Smart-EX. Es un tren de JR West: reservar en eki-net o en el mostrador de JR West el mismo día que abre la ventana.",
+        "href": "https://www.eki-net.com/en/",
+        "linkLabel": "eki-net",
+    },
+    {
+        "when": "14 oct, 10:00 JST",
+        "title": "Shinkansen Kanazawa → Tokio, 14 nov",
+        "detail": "Es el Hokuriku, fuera de Smart-EX. Reservar en eki-net. Van con mochila, así que no hace falta asiento de maleta grande.",
+        "href": "https://www.eki-net.com/en/",
+        "linkLabel": "eki-net",
+    },
+    {
+        "when": "Noche del 2 nov",
+        "title": "Yamato de las maletas hacia Osaka",
+        "detail": "El envío es para el día siguiente. Dejarlas a las 05:45 del 3 nov no alcanza: el mostrador todavía no abre. Reservar la recogida la noche del 2.",
+        "href": "./dias/2026-11-03.html",
+        "linkLabel": "Ver el día",
+    },
+]
+
+
+def append_note(event: dict, note: str) -> None:
+    description = event.get("description") or ""
+    if note in description:
+        return
+    event["description"] = f"{description} {note}".strip()
+
+
+def apply_trip_planner_checks(day_list: list) -> None:
+    """Japan checks from trip-planner, applied to the existing plan."""
+    by_date = {day["date"]: day for day in day_list}
+
+    fuji = by_date.get("2026-11-03")
+    if fuji:
+        fuji["summary"] = (
+            "Festivo en Japón (Día de la Cultura, 3 nov). El Fuji Excursion de las 07:07 y el teleférico van más llenos. "
+            "Las maletas a Osaka se reservan la noche del 2, no a las 05:45."
+        )
+        for event in fuji["events"]:
+            if "maletas" in event["title"].lower():
+                append_note(
+                    event,
+                    "Reservar Yamato la noche del 2 de noviembre. Un envío hotel a hotel sale al día siguiente y el mostrador de las 05:45 aún no atiende.",
+                )
+
+    move = by_date.get("2026-11-04")
+    if move:
+        move["summary"] = (
+            "El ancla es el bus de las 14:00 a Mishima, todavía sin reservar. "
+            "La calle y el santuario de la mañana se saltan si van tarde. El Shinkansen Mishima–Kioto ya se puede comprar en Smart-EX."
+        )
+        for event in move["events"]:
+            title = event["title"].lower()
+            if "calle comercial retro" in title or "kitaguchi" in title:
+                append_note(
+                    event,
+                    "Bloque opcional. Si salen tarde del hotel, se salta: el bus de las 14:00 no se mueve.",
+                )
+            if title.startswith("bus estación kawaguchiko") or "mishima" in title and "bus" in title:
+                append_note(
+                    event,
+                    "Ancla del día. Reservar en Fujiyama Connect antes de salir de Tokio. Sin este asiento no hay Shinkansen.",
+                )
+            if "shinkansen mishima" in title:
+                append_note(
+                    event,
+                    "Comprar ya en Smart-EX: la ventana general abrió el 4 oct a las 10:00 JST. La Suica no paga este tramo.",
+                )
+
+    monday = by_date.get("2026-11-09")
+    if monday:
+        for event in monday["events"]:
+            if "teamlabs" in event["title"].lower():
+                append_note(
+                    event,
+                    "Es lunes, pero el cierre de museos no aplica: Fushimi y Daigo-ji abren, y esta entrada ya está comprada. Llegar 30 minutos antes.",
+                )
+
+    nagoya = by_date.get("2026-11-11")
+    if nagoya:
+        for event in nagoya["events"]:
+            title = event["title"].lower()
+            if "maletas" in title:
+                append_note(
+                    event,
+                    "Pedir el Yamato la noche del 10. El servicio es para el día siguiente y de aquí a Tokio van solo con mochila.",
+                )
+            if "osaka - nagoya" in title:
+                append_note(
+                    event,
+                    "Reservar el 11 oct a las 10:00 JST en Smart-EX. La Suica no cubre el asiento.",
+                )
+            if "shirasagi" in title:
+                append_note(
+                    event,
+                    "No está en Smart-EX. Reservar el 11 oct a las 10:00 JST en eki-net o JR West.",
+                )
+
+    back = by_date.get("2026-11-14")
+    if back:
+        for event in back["events"]:
+            if "kanazawa - tokyo" in event["title"].lower():
+                append_note(
+                    event,
+                    "Es el Shinkansen Hokuriku: no se compra en Smart-EX. Reservar el 14 oct a las 10:00 JST en eki-net.",
+                )
+
+
 def inject_special_events(days: dict) -> None:
     # Oct 30 — Sergio/Arley flights
     if "2026-10-30" in days:
@@ -1992,6 +2118,7 @@ def main():
             d["hotel"]["name"] = d["hotel"].get("group") or "Hotel"
 
     apply_images(day_list)
+    apply_trip_planner_checks(day_list)
 
     payload = {
         "meta": {
@@ -2002,6 +2129,7 @@ def main():
             "fxJPY_to_COP": JPY_TO_COP,
             "travelers": TRAVELERS,
             "source": "Excel Sebastián + reservas Gmail + ajustes Sergio/Arley",
+            "bookingLadder": BOOKING_LADDER,
             "generatedAt": datetime.now().isoformat(timespec="seconds"),
             "auditCounts": audit.get("counts"),
         },
