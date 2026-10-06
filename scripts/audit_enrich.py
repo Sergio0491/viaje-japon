@@ -394,16 +394,14 @@ def apply_event_flags(day: dict) -> None:
             )
             ev["bookingStatus"] = "needs_reservation"
 
-        # C4 hotels payment
-        if ev.get("category") == "hotel" and any(
-            k in t for k in ("kioto", "kyoto", "kanazawa", "yoyogi")
-        ):
-            if ev.get("bookingStatus") == "needs_reservation" or "confirmar" in detail:
+        # C4 hotels payment — solo el último de Tokio sigue pendiente
+        if ev.get("category") == "hotel" and "yoyogi" in t:
+            if ev.get("bookingStatus") == "needs_reservation" or "falta reservar" in detail:
                 ev["flags"].append(
                     flag(
                         "critical",
                         "confirm_payment",
-                        "Hotel con dirección pero pago/confirmación pendiente (no marcar listo).",
+                        "Hotel Yoyogi Uehara: es el único alojamiento que falta reservar y pagar.",
                     )
                 )
 

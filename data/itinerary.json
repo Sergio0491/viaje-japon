@@ -51,36 +51,36 @@
     "bookingLadder": [
       {
         "when": "Ahora",
-        "title": "Entradas de Tokyo DisneySea, 16 nov",
-        "detail": "Los ocho van todo el día. El parque figura de 09:00 a 21:00; comprar el 1-Day Passport y reconfirmar el horario en la web oficial.",
+        "title": "Entradas de Tokyo DisneySea, 15 nov",
+        "detail": "Los ocho van todo el día. Es el 15 porque Julián, Pipe y Mafalda se regresan el 16. Falta el 1-Day Passport; reconfirmar el horario del domingo en la web oficial.",
         "href": "https://www.tokyodisneyresort.jp/en/tds/",
         "linkLabel": "DisneySea"
       },
       {
-        "when": "Ahora",
+        "when": "Listo",
         "title": "Shinkansen Mishima → Kioto, 4 nov",
-        "detail": "La venta general de Smart-EX abrió el 4 oct a las 10:00 JST. Sigue sin localizador. La Suica no cubre este asiento.",
+        "detail": "Johan ya lo reservó y lo pagó. El comprobante está en Splitt. La Suica no cubre este asiento.",
         "href": "https://smart-ex.jp/en/",
         "linkLabel": "Smart-EX"
       },
       {
         "when": "11 oct, 10:00 JST",
         "title": "Shinkansen Osaka → Nagoya, 11 nov",
-        "detail": "Misma ventana: un mes antes, a las 10:00 JST. También es Tokaido, así que va en Smart-EX.",
+        "detail": "Todavía no abre. El 11 oct a las 10:00 JST, en Smart-EX. Hoy no hay que reservarlo.",
         "href": "https://smart-ex.jp/en/",
         "linkLabel": "Smart-EX"
       },
       {
         "when": "11 oct, 10:00 JST",
         "title": "Limited Express Shirasagi, 11 nov",
-        "detail": "No se compra en Smart-EX. Es un tren de JR West: reservar en eki-net o en el mostrador de JR West el mismo día que abre la ventana.",
+        "detail": "Todavía no abre. El 11 oct a las 10:00 JST, en eki-net o JR West: no está en Smart-EX. Hoy no hay que reservarlo.",
         "href": "https://www.eki-net.com/en/",
         "linkLabel": "eki-net"
       },
       {
         "when": "14 oct, 10:00 JST",
         "title": "Shinkansen Kanazawa → Tokio, 14 nov",
-        "detail": "Es el Hokuriku, fuera de Smart-EX. Reservar en eki-net. Van con mochila, así que no hace falta asiento de maleta grande.",
+        "detail": "Todavía no abre. El 14 oct a las 10:00 JST, en eki-net: es el Hokuriku, fuera de Smart-EX. Hoy no hay que reservarlo.",
         "href": "https://www.eki-net.com/en/",
         "linkLabel": "eki-net"
       },
@@ -92,11 +92,11 @@
         "linkLabel": "Ver el día"
       }
     ],
-    "generatedAt": "2026-10-05T19:47:55",
+    "generatedAt": "2026-10-05T20:27:10",
     "auditCounts": {
-      "critical": 10,
+      "critical": 6,
       "high": 37,
-      "medium": 15,
+      "medium": 14,
       "low": 1
     }
   },
@@ -189,7 +189,7 @@
             }
           ],
           "bookingStatus": "ready",
-          "bookingDetail": "Reservado y pagado según Excel (verde)",
+          "bookingDetail": "Reservado y pagado",
           "costs": [
             {
               "item": "Hotel (prorrateo Excel)",
@@ -198,7 +198,7 @@
               "perPerson": true
             }
           ],
-          "reservation": "Reservado y pagado según Excel (verde)",
+          "reservation": "Reservado y pagado",
           "image": "../img/asakusa-hotel.jpg",
           "imageCredit": "",
           "bring": [],
@@ -938,7 +938,7 @@
             }
           ],
           "bookingStatus": "ready",
-          "bookingDetail": "Reservado y pagado según Excel (verde)",
+          "bookingDetail": "Reservado y pagado",
           "costs": [
             {
               "item": "Hotel (prorrateo Excel)",
@@ -947,7 +947,7 @@
               "perPerson": true
             }
           ],
-          "reservation": "Reservado y pagado según Excel (verde)",
+          "reservation": "Reservado y pagado",
           "image": "../img/asakusa-hotel.jpg",
           "imageCredit": "",
           "bring": [],
@@ -1605,7 +1605,7 @@
             }
           ],
           "bookingStatus": "ready",
-          "bookingDetail": "Reservado y pagado según Excel (verde)",
+          "bookingDetail": "Reservado y pagado",
           "costs": [
             {
               "item": "Hotel (prorrateo Excel)",
@@ -1614,7 +1614,7 @@
               "perPerson": true
             }
           ],
-          "reservation": "Reservado y pagado según Excel (verde)",
+          "reservation": "Reservado y pagado",
           "image": "../img/asakusa-hotel.jpg",
           "imageCredit": "",
           "bring": [],
@@ -2281,7 +2281,7 @@
             }
           ],
           "bookingStatus": "ready",
-          "bookingDetail": "Reservado y pagado según Excel (verde)",
+          "bookingDetail": "Reservado y pagado",
           "costs": [
             {
               "item": "Hotel (prorrateo Excel)",
@@ -2290,7 +2290,7 @@
               "perPerson": true
             }
           ],
-          "reservation": "Reservado y pagado según Excel (verde)",
+          "reservation": "Reservado y pagado",
           "image": "../img/asakusa-hotel.jpg",
           "imageCredit": "",
           "bring": [],
@@ -3336,7 +3336,7 @@
             }
           ],
           "bookingStatus": "ready",
-          "bookingDetail": "Reservado y pagado según Excel (verde)",
+          "bookingDetail": "Reservado y pagado",
           "costs": [
             {
               "item": "Hotel (prorrateo Excel)",
@@ -3345,7 +3345,7 @@
               "perPerson": true
             }
           ],
-          "reservation": "Reservado y pagado según Excel (verde)",
+          "reservation": "Reservado y pagado",
           "image": "../img/asakusa-hotel.jpg",
           "imageCredit": "",
           "bring": [],
@@ -4204,7 +4204,7 @@
             }
           ],
           "bookingStatus": "ready",
-          "bookingDetail": "Reservado y pagado según Excel (verde)",
+          "bookingDetail": "Reservado y pagado",
           "costs": [
             {
               "item": "Hotel (prorrateo Excel)",
@@ -4213,7 +4213,7 @@
               "perPerson": true
             }
           ],
-          "reservation": "Reservado y pagado según Excel (verde)",
+          "reservation": "Reservado y pagado",
           "image": "../img/kawaguchiko.jpg",
           "imageCredit": "",
           "bring": [],
@@ -4244,7 +4244,7 @@
       "weekday": "miércoles",
       "title": "Miércoles 2026-11-04 — Kawaguchiko → Kioto (Día 6)",
       "city": "Kawaguchiko → Kioto",
-      "summary": "El ancla es el bus de las 14:00 a Mishima, todavía sin reservar. La calle y el santuario de la mañana se saltan si van tarde. El Shinkansen Mishima–Kioto ya se puede comprar en Smart-EX.",
+      "summary": "El ancla es el bus de las 14:00 a Mishima, todavía sin reservar. La calle y el santuario de la mañana se saltan si van tarde. El Shinkansen Mishima–Kioto ya está reservado y pagado por Johan; el comprobante está en Splitt.",
       "mapCenter": {
         "name": "Estación Kawaguchiko",
         "query": "Kawaguchiko Station",
@@ -4253,7 +4253,7 @@
       },
       "hotel": {
         "name": "Hotel Kioto (Kariganecho)",
-        "group": "Hotel Kioto (Kariganecho) — confirmar pago",
+        "group": "Hotel Kioto (Kariganecho) — reservado y pagado",
         "sergioArley": "Con el grupo"
       },
       "events": [
@@ -4728,7 +4728,7 @@
               "message": "Hueco 0 min < trayecto estimado 120 min + 10. Revisar orden o recortar."
             }
           ],
-          "description": "Localizar el andén al llegar a Mishima y abordar con la reserva preparada. Comprar comida solo si queda margen real. Comprar ya en Smart-EX: la ventana general abrió el 4 oct a las 10:00 JST. La Suica no paga este tramo.",
+          "description": "Localizar el andén al llegar a Mishima y abordar con la reserva preparada. Comprar comida solo si queda margen real. Johan ya lo reservó y lo pagó. El comprobante está en Splitt. La Suica no paga este tramo.",
           "from": null,
           "to": {
             "name": "Estación Mishima",
@@ -4784,8 +4784,8 @@
               "going": true
             }
           ],
-          "bookingStatus": "needs_reservation",
-          "bookingDetail": "Johan reserva los Shinkansen",
+          "bookingStatus": "ready",
+          "bookingDetail": "Reservado y pagado por Johan. El comprobante está en Splitt",
           "costs": [
             {
               "item": "Costo estimado por persona (Excel)",
@@ -4794,7 +4794,7 @@
               "perPerson": true
             }
           ],
-          "reservation": "",
+          "reservation": "Reservado y pagado por Johan. El comprobante está en Splitt",
           "image": "../img/shinkansen.jpg",
           "imageCredit": "",
           "bring": [
@@ -4904,13 +4904,7 @@
           "category": "hotel",
           "track": "all",
           "endOfDay": true,
-          "flags": [
-            {
-              "severity": "critical",
-              "code": "confirm_payment",
-              "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
-            }
-          ],
+          "flags": [],
           "description": "Llegar, hacer check-in y dejar preparada ropa cómoda para la salida temprana. Confirmar el regreso después de Pontocho.",
           "from": null,
           "to": {
@@ -4967,8 +4961,8 @@
               "going": true
             }
           ],
-          "bookingStatus": "needs_reservation",
-          "bookingDetail": "Dirección en Excel; confirmar si ya está pagado",
+          "bookingStatus": "ready",
+          "bookingDetail": "Reservado y pagado",
           "costs": [
             {
               "item": "Hotel (prorrateo Excel)",
@@ -4977,7 +4971,7 @@
               "perPerson": true
             }
           ],
-          "reservation": "",
+          "reservation": "Reservado y pagado",
           "image": "../img/kyoto-hotel.jpg",
           "imageCredit": "",
           "bring": [],
@@ -5017,7 +5011,7 @@
       },
       "hotel": {
         "name": "Hotel Kioto (Kariganecho)",
-        "group": "Hotel Kioto (Kariganecho) — confirmar pago",
+        "group": "Hotel Kioto (Kariganecho) — reservado y pagado",
         "sergioArley": "Con el grupo"
       },
       "events": [
@@ -6226,13 +6220,7 @@
           "category": "hotel",
           "track": "all",
           "endOfDay": true,
-          "flags": [
-            {
-              "severity": "critical",
-              "code": "confirm_payment",
-              "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
-            }
-          ],
+          "flags": [],
           "description": "Llegar, hacer check-in y dejar preparada ropa cómoda para la salida temprana. Confirmar el regreso después de Pontocho.",
           "from": {
             "name": "Calle Pontocho",
@@ -6296,8 +6284,8 @@
               "going": true
             }
           ],
-          "bookingStatus": "needs_reservation",
-          "bookingDetail": "Dirección en Excel; confirmar si ya está pagado",
+          "bookingStatus": "ready",
+          "bookingDetail": "Reservado y pagado",
           "costs": [
             {
               "item": "Hotel (prorrateo Excel)",
@@ -6306,7 +6294,7 @@
               "perPerson": true
             }
           ],
-          "reservation": "",
+          "reservation": "Reservado y pagado",
           "image": "../img/kyoto-hotel.jpg",
           "imageCredit": "",
           "bring": [],
@@ -7160,7 +7148,7 @@
             }
           ],
           "bookingStatus": "ready",
-          "bookingDetail": "Reservado y pagado según Excel (verde)",
+          "bookingDetail": "Reservado y pagado",
           "costs": [
             {
               "item": "Hotel (prorrateo Excel)",
@@ -7169,7 +7157,7 @@
               "perPerson": true
             }
           ],
-          "reservation": "Reservado y pagado según Excel (verde)",
+          "reservation": "Reservado y pagado",
           "image": "../img/osaka-stay.jpg",
           "imageCredit": "",
           "bring": [],
@@ -7821,7 +7809,7 @@
             }
           ],
           "bookingStatus": "ready",
-          "bookingDetail": "Reservado y pagado según Excel (verde)",
+          "bookingDetail": "Reservado y pagado",
           "costs": [
             {
               "item": "Hotel (prorrateo Excel)",
@@ -7830,7 +7818,7 @@
               "perPerson": true
             }
           ],
-          "reservation": "Reservado y pagado según Excel (verde)",
+          "reservation": "Reservado y pagado",
           "image": "../img/osaka-stay.jpg",
           "imageCredit": "",
           "bring": [],
@@ -8512,7 +8500,7 @@
             }
           ],
           "bookingStatus": "ready",
-          "bookingDetail": "Reservado y pagado según Excel (verde)",
+          "bookingDetail": "Reservado y pagado",
           "costs": [
             {
               "item": "Hotel (prorrateo Excel)",
@@ -8521,7 +8509,7 @@
               "perPerson": true
             }
           ],
-          "reservation": "Reservado y pagado según Excel (verde)",
+          "reservation": "Reservado y pagado",
           "image": "../img/osaka-stay.jpg",
           "imageCredit": "",
           "bring": [],
@@ -9395,7 +9383,7 @@
             }
           ],
           "bookingStatus": "ready",
-          "bookingDetail": "Reservado y pagado según Excel (verde)",
+          "bookingDetail": "Reservado y pagado",
           "costs": [
             {
               "item": "Hotel (prorrateo Excel)",
@@ -9404,7 +9392,7 @@
               "perPerson": true
             }
           ],
-          "reservation": "Reservado y pagado según Excel (verde)",
+          "reservation": "Reservado y pagado",
           "image": "../img/osaka-stay.jpg",
           "imageCredit": "",
           "bring": [],
@@ -9604,7 +9592,7 @@
             }
           ],
           "bookingStatus": "ready",
-          "bookingDetail": "Reservado y pagado según Excel (verde)",
+          "bookingDetail": "Reservado y pagado",
           "costs": [
             {
               "item": "Hotel (prorrateo Excel)",
@@ -9613,7 +9601,7 @@
               "perPerson": true
             }
           ],
-          "reservation": "Reservado y pagado según Excel (verde)",
+          "reservation": "Reservado y pagado",
           "image": "../img/osaka-stay.jpg",
           "imageCredit": "",
           "bring": [],
@@ -9653,7 +9641,7 @@
       },
       "hotel": {
         "name": "Airbnb Kanazawa",
-        "group": "Airbnb Kanazawa — confirmar pago",
+        "group": "Airbnb Kanazawa — reservado y pagado",
         "sergioArley": "Con el grupo"
       },
       "events": [
@@ -9750,7 +9738,7 @@
           "track": "all",
           "endOfDay": false,
           "flags": [],
-          "description": "Abordar con la reserva lista y llevar solo mochila. Al llegar, guardar equipaje antes de la escala de Nagoya. Reservar el 11 oct a las 10:00 JST en Smart-EX. La Suica no cubre el asiento.",
+          "description": "Abordar con la reserva lista y llevar solo mochila. Al llegar, guardar equipaje antes de la escala de Nagoya. Todavía no abre. El 11 oct a las 10:00 JST, en Smart-EX. Hoy no hay que reservarlo. La Suica no cubre el asiento.",
           "from": {
             "name": "Hotel Kioto (Kariganecho)",
             "query": "409-1 Kariganecho Shimogyo Kyoto",
@@ -9812,7 +9800,7 @@
             }
           ],
           "bookingStatus": "needs_reservation",
-          "bookingDetail": "Johan reserva los Shinkansen",
+          "bookingDetail": "Todavía no abre la ventana. No hay que reservarlo ahora",
           "costs": [
             {
               "item": "Costo estimado por persona (Excel)",
@@ -9933,7 +9921,7 @@
           "track": "all",
           "endOfDay": false,
           "flags": [],
-          "description": "Volver a la estación con margen, ubicar el andén y abordar con la reserva preparada. Llevar agua y algo ligero. No está en Smart-EX. Reservar el 11 oct a las 10:00 JST en eki-net o JR West.",
+          "description": "Volver a la estación con margen, ubicar el andén y abordar con la reserva preparada. Llevar agua y algo ligero. Todavía no abre. El 11 oct a las 10:00 JST, en eki-net o JR West. Hoy no hay que reservarlo.",
           "from": {
             "name": "Día en Nagoya",
             "query": "Día en Nagoya, Kyoto, Japan",
@@ -9995,7 +9983,7 @@
             }
           ],
           "bookingStatus": "needs_reservation",
-          "bookingDetail": "Johan reserva los Shinkansen",
+          "bookingDetail": "Todavía no abre la ventana. No hay que reservarlo ahora",
           "costs": [
             {
               "item": "Costo estimado por persona (Excel)",
@@ -10025,13 +10013,7 @@
           "category": "hotel",
           "track": "all",
           "endOfDay": true,
-          "flags": [
-            {
-              "severity": "critical",
-              "code": "confirm_payment",
-              "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
-            }
-          ],
+          "flags": [],
           "description": "Llegar al alojamiento, comprobar el acceso y preparar la salida del día siguiente. Mantener el equipaje agrupado.",
           "from": {
             "name": "Tren Limited Express Shirasagi",
@@ -10093,8 +10075,8 @@
               "going": true
             }
           ],
-          "bookingStatus": "needs_reservation",
-          "bookingDetail": "Dirección en Excel; confirmar si ya está pagado",
+          "bookingStatus": "ready",
+          "bookingDetail": "Reservado y pagado",
           "costs": [
             {
               "item": "Hotel (prorrateo Excel)",
@@ -10103,7 +10085,7 @@
               "perPerson": true
             }
           ],
-          "reservation": "",
+          "reservation": "Reservado y pagado",
           "image": "../img/kanazawa-stay.jpg",
           "imageCredit": "",
           "bring": [],
@@ -10149,7 +10131,7 @@
       },
       "hotel": {
         "name": "Airbnb Kanazawa",
-        "group": "Airbnb Kanazawa — confirmar pago",
+        "group": "Airbnb Kanazawa — reservado y pagado",
         "sergioArley": "Con el grupo"
       },
       "events": [
@@ -10497,13 +10479,7 @@
           "category": "hotel",
           "track": "all",
           "endOfDay": true,
-          "flags": [
-            {
-              "severity": "critical",
-              "code": "confirm_payment",
-              "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
-            }
-          ],
+          "flags": [],
           "description": "Llegar al alojamiento, comprobar el acceso y preparar la salida del día siguiente. Mantener el equipaje agrupado.",
           "from": {
             "name": "Caminar centro (Katamachi)",
@@ -10565,8 +10541,8 @@
               "going": true
             }
           ],
-          "bookingStatus": "needs_reservation",
-          "bookingDetail": "Dirección en Excel; confirmar si ya está pagado",
+          "bookingStatus": "ready",
+          "bookingDetail": "Reservado y pagado",
           "costs": [
             {
               "item": "Hotel (prorrateo Excel)",
@@ -10575,7 +10551,7 @@
               "perPerson": true
             }
           ],
-          "reservation": "",
+          "reservation": "Reservado y pagado",
           "image": "../img/kanazawa-stay.jpg",
           "imageCredit": "",
           "bring": [],
@@ -10615,7 +10591,7 @@
       },
       "hotel": {
         "name": "Airbnb Kanazawa",
-        "group": "Airbnb Kanazawa — confirmar pago",
+        "group": "Airbnb Kanazawa — reservado y pagado",
         "sergioArley": "Con el grupo"
       },
       "events": [
@@ -11250,7 +11226,7 @@
       },
       "hotel": {
         "name": "Hotel Yoyogi Uehara",
-        "group": "Hotel Yoyogi Uehara — confirmar pago",
+        "group": "Hotel Yoyogi Uehara — falta reservar y pagar",
         "sergioArley": "Con el grupo"
       },
       "events": [
@@ -11264,7 +11240,7 @@
           "track": "all",
           "endOfDay": false,
           "flags": [],
-          "description": "Llegar temprano a Kanazawa Station y abordar con la reserva lista. Al llegar a Tokio, ir primero al alojamiento. Es el Shinkansen Hokuriku: no se compra en Smart-EX. Reservar el 14 oct a las 10:00 JST en eki-net.",
+          "description": "Llegar temprano a Kanazawa Station y abordar con la reserva lista. Al llegar a Tokio, ir primero al alojamiento. Todavía no abre. El 14 oct a las 10:00 JST, en eki-net: es el Hokuriku y no se compra en Smart-EX. Hoy no hay que reservarlo.",
           "from": {
             "name": "Hotel Yoyogi Uehara",
             "query": "Hotel Yoyogi Uehara 17 Oyamacho Shibuya",
@@ -11326,7 +11302,7 @@
             }
           ],
           "bookingStatus": "needs_reservation",
-          "bookingDetail": "Johan reserva los Shinkansen",
+          "bookingDetail": "Todavía no abre la ventana. No hay que reservarlo ahora",
           "costs": [
             {
               "item": "Costo estimado por persona (Excel)",
@@ -11696,7 +11672,7 @@
             {
               "severity": "critical",
               "code": "confirm_payment",
-              "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
+              "message": "Hotel Yoyogi Uehara: es el único alojamiento que falta reservar y pagar."
             }
           ],
           "description": "Volver al hotel de Yoyogi-Uehara y preparar la jornada siguiente. Confirmar la hora de salida y el trayecto al primer punto.",
@@ -11763,7 +11739,7 @@
             }
           ],
           "bookingStatus": "needs_reservation",
-          "bookingDetail": "Dirección en Excel; confirmar si ya está pagado",
+          "bookingDetail": "Único hotel pendiente: falta reservarlo y pagarlo",
           "costs": [
             {
               "item": "Hotel (prorrateo Excel)",
@@ -11803,7 +11779,7 @@
       "weekday": "domingo",
       "title": "Domingo 2026-11-15 — Tokio (Día 17)",
       "city": "Tokio",
-      "summary": "7 paradas · Empieza con Santuario Meiji Jingu por la mañana (Festival Shichi-Go-San con niños en kimono).",
+      "summary": "Los ocho van a Tokyo DisneySea. Es el 15, no el 16, porque Julián, Pipe y Mafalda se regresan al día siguiente. Salida del hotel hacia las 08:00. Falta comprar las entradas.",
       "mapCenter": {
         "name": "Hotel Yoyogi Uehara",
         "query": "Hotel Yoyogi Uehara 17 Oyamacho Shibuya",
@@ -11812,664 +11788,7 @@
       },
       "hotel": {
         "name": "Hotel Yoyogi Uehara",
-        "group": "Hotel Yoyogi Uehara — confirmar pago",
-        "sergioArley": "Con el grupo"
-      },
-      "events": [
-        {
-          "id": "2026-11-15-174-santuario-meiji-jingu-por-la-mañana-festival-shi",
-          "start": "09:00",
-          "end": "10:30",
-          "inferred": true,
-          "title": "Santuario Meiji Jingu por la mañana (Festival Shichi-Go-San con niños en kimono)",
-          "category": "visita",
-          "track": "all",
-          "endOfDay": false,
-          "flags": [
-            {
-              "severity": "medium",
-              "code": "crowded",
-              "message": "Meiji en Shichi-Go-San: muchedumbre esperada; llegar temprano o acortar."
-            }
-          ],
-          "description": "Entrar por el gran torii y recorrer el santuario. Por Shichi-Go-San habrá familias y más gente: observar con respeto.",
-          "from": {
-            "name": "Hotel Yoyogi Uehara",
-            "query": "Hotel Yoyogi Uehara 17 Oyamacho Shibuya",
-            "lat": 35.6682854,
-            "lng": 139.6706681
-          },
-          "to": {
-            "name": "Meiji Jingu",
-            "query": "Meiji Jingu Shrine Tokyo",
-            "lat": 35.6764,
-            "lng": 139.6993
-          },
-          "travel": {
-            "mode": "metro",
-            "durationMin": 19,
-            "notes": "Metro/tren local ~2.7 km · a pie serían ~42 min",
-            "distanceKm": 2.74,
-            "walkDurationMin": 42,
-            "inferred": true
-          },
-          "participants": [
-            {
-              "id": "sergio",
-              "name": "Sergio Valencia",
-              "going": true
-            },
-            {
-              "id": "arley",
-              "name": "Arley Vásquez",
-              "going": true
-            },
-            {
-              "id": "pipe",
-              "name": "Pipe Escobar",
-              "going": true
-            },
-            {
-              "id": "johan",
-              "name": "Johan Bolívar",
-              "going": true
-            },
-            {
-              "id": "julian",
-              "name": "Julián Otalvaro",
-              "going": true
-            },
-            {
-              "id": "mafalda",
-              "name": "Mafalda",
-              "going": true
-            },
-            {
-              "id": "tatiana",
-              "name": "Tatiana Betancur",
-              "going": true
-            },
-            {
-              "id": "sebastian",
-              "name": "Sebastián Vargas",
-              "going": true
-            }
-          ],
-          "bookingStatus": "walk_in",
-          "bookingDetail": "Entrada gratuita o donación",
-          "costs": [],
-          "reservation": "",
-          "image": "../img/meiji.jpg",
-          "imageCredit": "",
-          "bring": [
-            "Ropa cómoda que cubra hombros",
-            "Monedas para ofrenda"
-          ],
-          "dontBring": [
-            "Sombrero dentro del santuario",
-            "Fotos donde esté prohibido"
-          ],
-          "source": "excel"
-        },
-        {
-          "id": "2026-11-15-175-parque-yoyogi-aca-mismo-esta-el-santuario-realme",
-          "start": "10:52",
-          "end": "12:22",
-          "inferred": true,
-          "title": "Parque Yoyogi (aca mismo esta el Santuario realmente)",
-          "category": "visita",
-          "track": "all",
-          "endOfDay": false,
-          "flags": [],
-          "description": "Paseo y descanso después del santuario. Recortar este bloque si el día va retrasado.",
-          "from": {
-            "name": "Meiji Jingu",
-            "query": "Meiji Jingu Shrine Tokyo",
-            "lat": 35.6764,
-            "lng": 139.6993
-          },
-          "to": {
-            "name": "Yoyogi Park",
-            "query": "Yoyogi Park Tokyo",
-            "lat": 35.6717,
-            "lng": 139.695
-          },
-          "travel": {
-            "mode": "walk",
-            "durationMin": 12,
-            "notes": "Caminata ~0.7 km",
-            "distanceKm": 0.65,
-            "inferred": true
-          },
-          "participants": [
-            {
-              "id": "sergio",
-              "name": "Sergio Valencia",
-              "going": true
-            },
-            {
-              "id": "arley",
-              "name": "Arley Vásquez",
-              "going": true
-            },
-            {
-              "id": "pipe",
-              "name": "Pipe Escobar",
-              "going": true
-            },
-            {
-              "id": "johan",
-              "name": "Johan Bolívar",
-              "going": true
-            },
-            {
-              "id": "julian",
-              "name": "Julián Otalvaro",
-              "going": true
-            },
-            {
-              "id": "mafalda",
-              "name": "Mafalda",
-              "going": true
-            },
-            {
-              "id": "tatiana",
-              "name": "Tatiana Betancur",
-              "going": true
-            },
-            {
-              "id": "sebastian",
-              "name": "Sebastián Vargas",
-              "going": true
-            }
-          ],
-          "bookingStatus": "needs_ticket",
-          "bookingDetail": "Entrada en taquilla el mismo día",
-          "costs": [],
-          "reservation": "",
-          "image": "../img/yoyogi-park.jpg",
-          "imageCredit": "",
-          "bring": [
-            "Ropa cómoda que cubra hombros",
-            "Monedas para ofrenda"
-          ],
-          "dontBring": [
-            "Sombrero dentro del santuario",
-            "Fotos donde esté prohibido"
-          ],
-          "source": "excel",
-          "reflowed": true
-        },
-        {
-          "id": "2026-11-15-176-harajuki-y-omotesando-caminata-por-el-barrio",
-          "start": "12:45",
-          "end": "14:15",
-          "inferred": true,
-          "title": "Harajuki y Omotesando caminata por el barrio",
-          "category": "visita",
-          "track": "all",
-          "endOfDay": false,
-          "flags": [],
-          "description": "Recorrer Takeshita y continuar hacia Omotesando. Definir tiempo libre y punto de encuentro.",
-          "from": {
-            "name": "Yoyogi Park",
-            "query": "Yoyogi Park Tokyo",
-            "lat": 35.6717,
-            "lng": 139.695
-          },
-          "to": {
-            "name": "Harajuku / Omotesando",
-            "query": "Harajuku Station Tokyo",
-            "lat": 35.6702,
-            "lng": 139.7026
-          },
-          "travel": {
-            "mode": "walk",
-            "durationMin": 13,
-            "notes": "Caminata ~0.7 km",
-            "distanceKm": 0.71,
-            "inferred": true
-          },
-          "participants": [
-            {
-              "id": "sergio",
-              "name": "Sergio Valencia",
-              "going": true
-            },
-            {
-              "id": "arley",
-              "name": "Arley Vásquez",
-              "going": true
-            },
-            {
-              "id": "pipe",
-              "name": "Pipe Escobar",
-              "going": true
-            },
-            {
-              "id": "johan",
-              "name": "Johan Bolívar",
-              "going": true
-            },
-            {
-              "id": "julian",
-              "name": "Julián Otalvaro",
-              "going": true
-            },
-            {
-              "id": "mafalda",
-              "name": "Mafalda",
-              "going": true
-            },
-            {
-              "id": "tatiana",
-              "name": "Tatiana Betancur",
-              "going": true
-            },
-            {
-              "id": "sebastian",
-              "name": "Sebastián Vargas",
-              "going": true
-            }
-          ],
-          "bookingStatus": "walk_in",
-          "bookingDetail": "Sin reserva previa",
-          "costs": [],
-          "reservation": "",
-          "image": "../img/harajuku.jpg",
-          "imageCredit": "",
-          "bring": [],
-          "dontBring": [],
-          "source": "excel",
-          "reflowed": true
-        },
-        {
-          "id": "2026-11-15-177-avenida-de-árboles-ginkgo-del-jingu-gaien-con-fe",
-          "start": "14:51",
-          "end": "16:21",
-          "inferred": true,
-          "title": "Avenida de Árboles Ginkgo del Jingu Gaien (con festival incluido)",
-          "category": "visita",
-          "track": "all",
-          "endOfDay": false,
-          "flags": [],
-          "description": "Caminar la avenida y el festival. Esperar mucha gente y conservar margen para Shibuya.",
-          "from": {
-            "name": "Harajuku / Omotesando",
-            "query": "Harajuku Station Tokyo",
-            "lat": 35.6702,
-            "lng": 139.7026
-          },
-          "to": {
-            "name": "Jingu Gaien Ginkgo Avenue",
-            "query": "Jingu Gaien Ginkgo Avenue Tokyo",
-            "lat": 35.6785,
-            "lng": 139.7175
-          },
-          "travel": {
-            "mode": "walk",
-            "durationMin": 26,
-            "notes": "Caminata ~1.6 km",
-            "distanceKm": 1.63,
-            "inferred": true
-          },
-          "participants": [
-            {
-              "id": "sergio",
-              "name": "Sergio Valencia",
-              "going": true
-            },
-            {
-              "id": "arley",
-              "name": "Arley Vásquez",
-              "going": true
-            },
-            {
-              "id": "pipe",
-              "name": "Pipe Escobar",
-              "going": true
-            },
-            {
-              "id": "johan",
-              "name": "Johan Bolívar",
-              "going": true
-            },
-            {
-              "id": "julian",
-              "name": "Julián Otalvaro",
-              "going": true
-            },
-            {
-              "id": "mafalda",
-              "name": "Mafalda",
-              "going": true
-            },
-            {
-              "id": "tatiana",
-              "name": "Tatiana Betancur",
-              "going": true
-            },
-            {
-              "id": "sebastian",
-              "name": "Sebastián Vargas",
-              "going": true
-            }
-          ],
-          "bookingStatus": "walk_in",
-          "bookingDetail": "Sin reserva previa",
-          "costs": [],
-          "reservation": "",
-          "image": "../img/ginkgo.jpg",
-          "imageCredit": "",
-          "bring": [],
-          "dontBring": [],
-          "source": "excel",
-          "reflowed": true
-        },
-        {
-          "id": "2026-11-15-178-shibuya-recorrer-calles-y-estatua-de-hachiko",
-          "start": "16:50",
-          "end": "18:20",
-          "inferred": true,
-          "title": "Shibuya (recorrer calles y estatua de Hachiko)",
-          "category": "visita",
-          "track": "all",
-          "endOfDay": false,
-          "flags": [],
-          "description": "Ver Hachiko, cruzar el scramble y recorrer las calles cercanas. Reagruparse junto a Hachiko.",
-          "from": {
-            "name": "Jingu Gaien Ginkgo Avenue",
-            "query": "Jingu Gaien Ginkgo Avenue Tokyo",
-            "lat": 35.6785,
-            "lng": 139.7175
-          },
-          "to": {
-            "name": "Shibuya Crossing",
-            "query": "Shibuya Crossing Tokyo",
-            "lat": 35.6595,
-            "lng": 139.7005
-          },
-          "travel": {
-            "mode": "metro",
-            "durationMin": 19,
-            "notes": "Metro/tren local ~2.6 km · a pie serían ~40 min",
-            "distanceKm": 2.61,
-            "walkDurationMin": 40,
-            "inferred": true
-          },
-          "participants": [
-            {
-              "id": "sergio",
-              "name": "Sergio Valencia",
-              "going": true
-            },
-            {
-              "id": "arley",
-              "name": "Arley Vásquez",
-              "going": true
-            },
-            {
-              "id": "pipe",
-              "name": "Pipe Escobar",
-              "going": true
-            },
-            {
-              "id": "johan",
-              "name": "Johan Bolívar",
-              "going": true
-            },
-            {
-              "id": "julian",
-              "name": "Julián Otalvaro",
-              "going": true
-            },
-            {
-              "id": "mafalda",
-              "name": "Mafalda",
-              "going": true
-            },
-            {
-              "id": "tatiana",
-              "name": "Tatiana Betancur",
-              "going": true
-            },
-            {
-              "id": "sebastian",
-              "name": "Sebastián Vargas",
-              "going": true
-            }
-          ],
-          "bookingStatus": "walk_in",
-          "bookingDetail": "Sin reserva previa",
-          "costs": [],
-          "reservation": "",
-          "image": "../img/shibuya.jpg",
-          "imageCredit": "",
-          "bring": [],
-          "dontBring": [],
-          "source": "excel",
-          "reflowed": true
-        },
-        {
-          "id": "2026-11-15-179-santuario-nogi-y-cena-en-la-zona",
-          "start": "18:50",
-          "end": "20:20",
-          "inferred": true,
-          "title": "Santuario Nogi y cena en la zona",
-          "category": "visita",
-          "track": "all",
-          "endOfDay": false,
-          "flags": [],
-          "description": "Visitar el santuario y cenar en la zona. Última actividad: no añadir otra parada distante.",
-          "from": {
-            "name": "Shibuya Crossing",
-            "query": "Shibuya Crossing Tokyo",
-            "lat": 35.6595,
-            "lng": 139.7005
-          },
-          "to": {
-            "name": "Nogi Shrine",
-            "query": "Nogi Shrine Minato Tokyo",
-            "lat": 35.669,
-            "lng": 139.7335
-          },
-          "travel": {
-            "mode": "metro",
-            "durationMin": 20,
-            "notes": "Metro/tren local ~3.2 km · a pie serían ~48 min",
-            "distanceKm": 3.16,
-            "walkDurationMin": 48,
-            "inferred": true
-          },
-          "participants": [
-            {
-              "id": "sergio",
-              "name": "Sergio Valencia",
-              "going": true
-            },
-            {
-              "id": "arley",
-              "name": "Arley Vásquez",
-              "going": true
-            },
-            {
-              "id": "pipe",
-              "name": "Pipe Escobar",
-              "going": true
-            },
-            {
-              "id": "johan",
-              "name": "Johan Bolívar",
-              "going": true
-            },
-            {
-              "id": "julian",
-              "name": "Julián Otalvaro",
-              "going": true
-            },
-            {
-              "id": "mafalda",
-              "name": "Mafalda",
-              "going": true
-            },
-            {
-              "id": "tatiana",
-              "name": "Tatiana Betancur",
-              "going": true
-            },
-            {
-              "id": "sebastian",
-              "name": "Sebastián Vargas",
-              "going": true
-            }
-          ],
-          "bookingStatus": "needs_ticket",
-          "bookingDetail": "Entrada en taquilla el mismo día",
-          "costs": [],
-          "reservation": "",
-          "image": "../img/nogi.jpg",
-          "imageCredit": "",
-          "bring": [
-            "Ropa cómoda que cubra hombros",
-            "Monedas para ofrenda"
-          ],
-          "dontBring": [
-            "Sombrero dentro del santuario",
-            "Fotos donde esté prohibido"
-          ],
-          "source": "excel",
-          "reflowed": true
-        },
-        {
-          "id": "2026-11-15-180-hotel-tokyo-2-hotel-yoyogi-uehara",
-          "start": "22:40",
-          "end": "23:10",
-          "inferred": true,
-          "title": "Hotel Tokyo 2 - Hotel Yoyogi Uehara",
-          "category": "hotel",
-          "track": "all",
-          "endOfDay": true,
-          "flags": [
-            {
-              "severity": "critical",
-              "code": "confirm_payment",
-              "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
-            }
-          ],
-          "description": "Volver al hotel de Yoyogi-Uehara y preparar la jornada siguiente. Confirmar la hora de salida y el trayecto al primer punto.",
-          "from": {
-            "name": "Nogi Shrine",
-            "query": "Nogi Shrine Minato Tokyo",
-            "lat": 35.669,
-            "lng": 139.7335
-          },
-          "to": {
-            "name": "Hotel Yoyogi Uehara",
-            "query": "Hotel Yoyogi Uehara 17 Oyamacho Shibuya",
-            "lat": 35.6682854,
-            "lng": 139.6706681
-          },
-          "travel": {
-            "mode": "metro",
-            "durationMin": 27,
-            "notes": "Metro/tren local ~5.7 km · a pie serían ~84 min",
-            "distanceKm": 5.68,
-            "walkDurationMin": 84,
-            "inferred": true
-          },
-          "participants": [
-            {
-              "id": "sergio",
-              "name": "Sergio Valencia",
-              "going": true
-            },
-            {
-              "id": "arley",
-              "name": "Arley Vásquez",
-              "going": true
-            },
-            {
-              "id": "pipe",
-              "name": "Pipe Escobar",
-              "going": true
-            },
-            {
-              "id": "johan",
-              "name": "Johan Bolívar",
-              "going": true
-            },
-            {
-              "id": "julian",
-              "name": "Julián Otalvaro",
-              "going": true
-            },
-            {
-              "id": "mafalda",
-              "name": "Mafalda",
-              "going": true
-            },
-            {
-              "id": "tatiana",
-              "name": "Tatiana Betancur",
-              "going": true
-            },
-            {
-              "id": "sebastian",
-              "name": "Sebastián Vargas",
-              "going": true
-            }
-          ],
-          "bookingStatus": "needs_reservation",
-          "bookingDetail": "Dirección en Excel; confirmar si ya está pagado",
-          "costs": [
-            {
-              "item": "Hotel (prorrateo Excel)",
-              "amount": 8000,
-              "currency": "JPY",
-              "perPerson": true
-            }
-          ],
-          "reservation": "",
-          "image": "../img/yoyogi-hotel.jpg",
-          "imageCredit": "",
-          "bring": [],
-          "dontBring": [],
-          "source": "excel"
-        }
-      ],
-      "foodBudgetJPY": 5300.0,
-      "dayFlags": [],
-      "dayEssentials": {
-        "bring": [
-          "Suica cargada",
-          "Teléfono con mapas offline",
-          "Efectivo en yenes"
-        ],
-        "avoid": [
-          "Hablar fuerte en transporte público",
-          "Comer caminando en zonas saturadas"
-        ]
-      },
-      "perPersonTotalJPY": 13300,
-      "perPersonTotalCOP": 279300,
-      "exchangeRateJPYCOP": 21
-    },
-    {
-      "date": "2026-11-16",
-      "dayLabel": "Día 18",
-      "weekday": "lunes",
-      "title": "Lunes 2026-11-16 — Tokio (Día 18)",
-      "city": "Tokio",
-      "summary": "Los ocho van a Tokyo DisneySea todo el día. Salida del hotel hacia las 08:00; el parque figura de 09:00 a 21:00. Falta comprar las entradas.",
-      "mapCenter": {
-        "name": "Hotel Yoyogi Uehara",
-        "query": "Hotel Yoyogi Uehara 17 Oyamacho Shibuya",
-        "lat": 35.6682854,
-        "lng": 139.6706681
-      },
-      "hotel": {
-        "name": "Hotel Yoyogi Uehara",
-        "group": "Hotel Yoyogi Uehara — confirmar pago",
+        "group": "Hotel Yoyogi Uehara — falta reservar y pagar",
         "sergioArley": "Con el grupo"
       },
       "events": [
@@ -12483,7 +11802,7 @@
           "track": "all",
           "endOfDay": false,
           "flags": [],
-          "description": "Día completo para los ocho. El 16 nov 2026 Tokyo DisneySea figura abierto de 09:00 a 21:00; reconfirmarlo en tokyodisneyresort.jp porque el horario puede cambiar. Salir del Hotel Yoyogi-Uehara hacia las 08:00 y tomar el tren a Maihama, unos 75 minutos con transbordo, para estar en la entrada a la apertura. Comprar el 1-Day Passport de adulto antes de ir. Comer dentro del parque y salir con margen para volver al hotel.",
+          "description": "Día completo para los ocho, domingo 15 de noviembre. Reconfirmar el horario de ese domingo en tokyodisneyresort.jp antes de comprar. Salir del Hotel Yoyogi-Uehara hacia las 08:00 y tomar el tren a Maihama, unos 75 minutos con transbordo. Comprar el 1-Day Passport de adulto antes de ir. Comer dentro del parque y salir con margen para volver al hotel. Julián, Pipe y Mafalda se regresan el 16, así que este es su último día con el grupo.",
           "from": {
             "name": "Hotel Yoyogi Uehara",
             "query": "Hotel Yoyogi Uehara 17 Oyamacho Shibuya",
@@ -12545,7 +11864,7 @@
             }
           ],
           "bookingStatus": "needs_ticket",
-          "bookingDetail": "Los 8 van. Falta comprar el 1-Day Passport",
+          "bookingDetail": "Los 8 van el 15 nov. Falta comprar el 1-Day Passport",
           "costs": [],
           "reservation": "",
           "image": "../img/disneysea.jpg",
@@ -12562,7 +11881,7 @@
           "scheduleLocked": true
         },
         {
-          "id": "2026-11-16-188-hotel-tokyo-2-hotel-yoyogi-uehara",
+          "id": "2026-11-15-180-hotel-tokyo-2-hotel-yoyogi-uehara",
           "start": "22:40",
           "end": "23:10",
           "inferred": true,
@@ -12574,7 +11893,7 @@
             {
               "severity": "critical",
               "code": "confirm_payment",
-              "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
+              "message": "Hotel Yoyogi Uehara: es el único alojamiento que falta reservar y pagar."
             }
           ],
           "description": "Volver al hotel de Yoyogi-Uehara y preparar la jornada siguiente. Confirmar la hora de salida y el trayecto al primer punto.",
@@ -12641,7 +11960,297 @@
             }
           ],
           "bookingStatus": "needs_reservation",
-          "bookingDetail": "Dirección en Excel; confirmar si ya está pagado",
+          "bookingDetail": "Único hotel pendiente: falta reservarlo y pagarlo",
+          "costs": [
+            {
+              "item": "Hotel (prorrateo Excel)",
+              "amount": 8000,
+              "currency": "JPY",
+              "perPerson": true
+            }
+          ],
+          "reservation": "",
+          "image": "../img/yoyogi-hotel.jpg",
+          "imageCredit": "",
+          "bring": [],
+          "dontBring": [],
+          "source": "excel"
+        }
+      ],
+      "foodBudgetJPY": 5300.0,
+      "dayFlags": [],
+      "dayEssentials": {
+        "bring": [
+          "Suica cargada",
+          "Teléfono con mapas offline",
+          "Efectivo en yenes"
+        ],
+        "avoid": [
+          "Hablar fuerte en transporte público",
+          "Comer caminando en zonas saturadas"
+        ]
+      },
+      "perPersonTotalJPY": 13300,
+      "perPersonTotalCOP": 279300,
+      "exchangeRateJPYCOP": 21
+    },
+    {
+      "date": "2026-11-16",
+      "dayLabel": "Día 18",
+      "weekday": "lunes",
+      "title": "Lunes 2026-11-16 — Tokio (Día 18)",
+      "city": "Tokio",
+      "summary": "Julián, Pipe y Mafalda se regresan. Sergio, Arley, Johan, Tatiana y Sebastián se quedan en Tokio, sin un plan cerrado.",
+      "mapCenter": {
+        "name": "Hotel Yoyogi Uehara",
+        "query": "Hotel Yoyogi Uehara 17 Oyamacho Shibuya",
+        "lat": 35.6682854,
+        "lng": 139.6706681
+      },
+      "hotel": {
+        "name": "Hotel Yoyogi Uehara",
+        "group": "Hotel Yoyogi Uehara — falta reservar y pagar",
+        "sergioArley": "Con el grupo"
+      },
+      "events": [
+        {
+          "id": "2026-11-16-regreso",
+          "start": "09:00",
+          "end": "12:00",
+          "inferred": true,
+          "scheduleLocked": true,
+          "track": "departure",
+          "title": "Regreso de Julián, Pipe y Mafalda",
+          "category": "transporte",
+          "description": "Se regresan el 16 de noviembre. Por eso DisneySea quedó el 15, con los ocho. El horario del vuelo no está en el plan.",
+          "from": null,
+          "to": {
+            "name": "Hotel Yoyogi Uehara",
+            "query": "Hotel Yoyogi Uehara 17 Oyamacho Shibuya",
+            "lat": 35.6682854,
+            "lng": 139.6706681
+          },
+          "travel": {
+            "mode": "taxi",
+            "durationMin": 0,
+            "notes": "Horario de vuelo pendiente"
+          },
+          "participants": [
+            {
+              "id": "sergio",
+              "name": "Sergio Valencia",
+              "going": false,
+              "reason": "Se quedan en Tokio"
+            },
+            {
+              "id": "arley",
+              "name": "Arley Vásquez",
+              "going": false,
+              "reason": "Se quedan en Tokio"
+            },
+            {
+              "id": "pipe",
+              "name": "Pipe Escobar",
+              "going": true
+            },
+            {
+              "id": "johan",
+              "name": "Johan Bolívar",
+              "going": false,
+              "reason": "Se quedan en Tokio"
+            },
+            {
+              "id": "julian",
+              "name": "Julián Otalvaro",
+              "going": true
+            },
+            {
+              "id": "mafalda",
+              "name": "Mafalda",
+              "going": true
+            },
+            {
+              "id": "tatiana",
+              "name": "Tatiana Betancur",
+              "going": false,
+              "reason": "Se quedan en Tokio"
+            },
+            {
+              "id": "sebastian",
+              "name": "Sebastián Vargas",
+              "going": false,
+              "reason": "Se quedan en Tokio"
+            }
+          ],
+          "bookingStatus": "na",
+          "bookingDetail": "El vuelo no está cargado en el plan",
+          "costs": [],
+          "reservation": "",
+          "image": "../img/metro.jpg",
+          "bring": [
+            "Pasaporte",
+            "Equipaje"
+          ],
+          "dontBring": [],
+          "source": "grupo",
+          "flags": [],
+          "imageCredit": ""
+        },
+        {
+          "id": "2026-11-16-dia-libre",
+          "start": "10:00",
+          "end": "18:00",
+          "inferred": false,
+          "scheduleLocked": true,
+          "track": "stay",
+          "title": "Día libre en Tokio",
+          "category": "visita",
+          "description": "Sin plan cerrado para quienes se quedan. El paseo de Meiji, Harajuku y Shibuya que estaba en el 15 sale del calendario porque ese día es DisneySea.",
+          "from": null,
+          "to": {
+            "name": "Hotel Yoyogi Uehara",
+            "query": "Hotel Yoyogi Uehara 17 Oyamacho Shibuya",
+            "lat": 35.6682854,
+            "lng": 139.6706681
+          },
+          "travel": {
+            "mode": "walk",
+            "durationMin": 0,
+            "notes": "Salen y vuelven al hotel"
+          },
+          "participants": [
+            {
+              "id": "sergio",
+              "name": "Sergio Valencia",
+              "going": true
+            },
+            {
+              "id": "arley",
+              "name": "Arley Vásquez",
+              "going": true
+            },
+            {
+              "id": "pipe",
+              "name": "Pipe Escobar",
+              "going": false,
+              "reason": "Se regresan el 16 de noviembre"
+            },
+            {
+              "id": "johan",
+              "name": "Johan Bolívar",
+              "going": true
+            },
+            {
+              "id": "julian",
+              "name": "Julián Otalvaro",
+              "going": false,
+              "reason": "Se regresan el 16 de noviembre"
+            },
+            {
+              "id": "mafalda",
+              "name": "Mafalda",
+              "going": false,
+              "reason": "Se regresan el 16 de noviembre"
+            },
+            {
+              "id": "tatiana",
+              "name": "Tatiana Betancur",
+              "going": true
+            },
+            {
+              "id": "sebastian",
+              "name": "Sebastián Vargas",
+              "going": true
+            }
+          ],
+          "bookingStatus": "walk_in",
+          "bookingDetail": "Nada que reservar",
+          "costs": [],
+          "reservation": "",
+          "image": "../img/tokyo-free.jpg",
+          "bring": [],
+          "dontBring": [],
+          "source": "grupo",
+          "flags": [],
+          "imageCredit": ""
+        },
+        {
+          "id": "2026-11-16-188-hotel-tokyo-2-hotel-yoyogi-uehara",
+          "start": "22:40",
+          "end": "23:10",
+          "inferred": true,
+          "title": "Hotel Tokyo 2 - Hotel Yoyogi Uehara",
+          "category": "hotel",
+          "track": "all",
+          "endOfDay": true,
+          "flags": [
+            {
+              "severity": "critical",
+              "code": "confirm_payment",
+              "message": "Hotel Yoyogi Uehara: es el único alojamiento que falta reservar y pagar."
+            }
+          ],
+          "description": "Volver al hotel de Yoyogi-Uehara y preparar la jornada siguiente. Confirmar la hora de salida y el trayecto al primer punto.",
+          "from": null,
+          "to": {
+            "name": "Hotel Yoyogi Uehara",
+            "query": "Hotel Yoyogi Uehara 17 Oyamacho Shibuya",
+            "lat": 35.6682854,
+            "lng": 139.6706681
+          },
+          "travel": {
+            "mode": "none",
+            "durationMin": 0,
+            "notes": "Sin coords — estimado genérico",
+            "inferred": true
+          },
+          "participants": [
+            {
+              "id": "sergio",
+              "name": "Sergio Valencia",
+              "going": true
+            },
+            {
+              "id": "arley",
+              "name": "Arley Vásquez",
+              "going": true
+            },
+            {
+              "id": "pipe",
+              "name": "Pipe Escobar",
+              "going": false,
+              "reason": "Se regresan el 16 de noviembre"
+            },
+            {
+              "id": "johan",
+              "name": "Johan Bolívar",
+              "going": true
+            },
+            {
+              "id": "julian",
+              "name": "Julián Otalvaro",
+              "going": false,
+              "reason": "Se regresan el 16 de noviembre"
+            },
+            {
+              "id": "mafalda",
+              "name": "Mafalda",
+              "going": false,
+              "reason": "Se regresan el 16 de noviembre"
+            },
+            {
+              "id": "tatiana",
+              "name": "Tatiana Betancur",
+              "going": true
+            },
+            {
+              "id": "sebastian",
+              "name": "Sebastián Vargas",
+              "going": true
+            }
+          ],
+          "bookingStatus": "needs_reservation",
+          "bookingDetail": "Único hotel pendiente: falta reservarlo y pagarlo",
           "costs": [
             {
               "item": "Hotel (prorrateo Excel)",
@@ -12690,7 +12299,7 @@
       },
       "hotel": {
         "name": "Hotel Yoyogi Uehara",
-        "group": "Hotel Yoyogi Uehara — confirmar pago",
+        "group": "Hotel Yoyogi Uehara — falta reservar y pagar",
         "sergioArley": "Con el grupo"
       },
       "events": [
@@ -12733,7 +12342,7 @@
               "id": "pipe",
               "name": "Pipe Escobar",
               "going": false,
-              "reason": "Salen la noche del 16 de noviembre"
+              "reason": "Se regresan el 16 de noviembre"
             },
             {
               "id": "johan",
@@ -12744,13 +12353,13 @@
               "id": "julian",
               "name": "Julián Otalvaro",
               "going": false,
-              "reason": "Salen la noche del 16 de noviembre"
+              "reason": "Se regresan el 16 de noviembre"
             },
             {
               "id": "mafalda",
               "name": "Mafalda",
               "going": false,
-              "reason": "Salen la noche del 16 de noviembre"
+              "reason": "Se regresan el 16 de noviembre"
             },
             {
               "id": "tatiana",
@@ -12812,7 +12421,7 @@
               "id": "pipe",
               "name": "Pipe Escobar",
               "going": false,
-              "reason": "Salen la noche del 16 de noviembre"
+              "reason": "Se regresan el 16 de noviembre"
             },
             {
               "id": "johan",
@@ -12823,13 +12432,13 @@
               "id": "julian",
               "name": "Julián Otalvaro",
               "going": false,
-              "reason": "Salen la noche del 16 de noviembre"
+              "reason": "Se regresan el 16 de noviembre"
             },
             {
               "id": "mafalda",
               "name": "Mafalda",
               "going": false,
-              "reason": "Salen la noche del 16 de noviembre"
+              "reason": "Se regresan el 16 de noviembre"
             },
             {
               "id": "tatiana",
@@ -12892,7 +12501,7 @@
               "id": "pipe",
               "name": "Pipe Escobar",
               "going": false,
-              "reason": "Salen la noche del 16 de noviembre"
+              "reason": "Se regresan el 16 de noviembre"
             },
             {
               "id": "johan",
@@ -12903,13 +12512,13 @@
               "id": "julian",
               "name": "Julián Otalvaro",
               "going": false,
-              "reason": "Salen la noche del 16 de noviembre"
+              "reason": "Se regresan el 16 de noviembre"
             },
             {
               "id": "mafalda",
               "name": "Mafalda",
               "going": false,
-              "reason": "Salen la noche del 16 de noviembre"
+              "reason": "Se regresan el 16 de noviembre"
             },
             {
               "id": "tatiana",
@@ -12946,7 +12555,7 @@
             {
               "severity": "critical",
               "code": "confirm_payment",
-              "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
+              "message": "Hotel Yoyogi Uehara: es el único alojamiento que falta reservar y pagar."
             }
           ],
           "description": "Volver al hotel de Yoyogi-Uehara y preparar la jornada siguiente. Confirmar la hora de salida y el trayecto al primer punto.",
@@ -12978,7 +12587,7 @@
               "id": "pipe",
               "name": "Pipe Escobar",
               "going": false,
-              "reason": "Salen la noche del 16 de noviembre"
+              "reason": "Se regresan el 16 de noviembre"
             },
             {
               "id": "johan",
@@ -12989,13 +12598,13 @@
               "id": "julian",
               "name": "Julián Otalvaro",
               "going": false,
-              "reason": "Salen la noche del 16 de noviembre"
+              "reason": "Se regresan el 16 de noviembre"
             },
             {
               "id": "mafalda",
               "name": "Mafalda",
               "going": false,
-              "reason": "Salen la noche del 16 de noviembre"
+              "reason": "Se regresan el 16 de noviembre"
             },
             {
               "id": "tatiana",
@@ -13009,7 +12618,7 @@
             }
           ],
           "bookingStatus": "needs_reservation",
-          "bookingDetail": "Dirección en Excel; confirmar si ya está pagado",
+          "bookingDetail": "Único hotel pendiente: falta reservarlo y pagarlo",
           "costs": [
             {
               "item": "Hotel (prorrateo Excel)",

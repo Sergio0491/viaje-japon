@@ -1,9 +1,9 @@
 {
   "generatedFor": "itinerary expert audit",
   "counts": {
-    "critical": 10,
+    "critical": 6,
     "high": 37,
-    "medium": 15,
+    "medium": 14,
     "low": 1
   },
   "flags": {
@@ -18,24 +18,6 @@
         "message": "Bus Kawaguchiko→Mishima 14:00: reservar en Fujiyama Connect (~¥2500). Sin localizador aún."
       },
       {
-        "date": "2026-11-04",
-        "dayTitle": "Miércoles 2026-11-04 — Kawaguchiko → Kioto (Día 6)",
-        "eventId": "2026-11-04-62-hotel-en-kioto",
-        "eventTitle": "Hotel en Kioto",
-        "severity": "critical",
-        "code": "confirm_payment",
-        "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
-      },
-      {
-        "date": "2026-11-05",
-        "dayTitle": "Jueves 2026-11-05 — Kioto (Día 7)",
-        "eventId": "2026-11-05-79-hotel-en-kioto",
-        "eventTitle": "Hotel en Kioto",
-        "severity": "critical",
-        "code": "confirm_payment",
-        "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
-      },
-      {
         "date": "2026-11-10",
         "dayTitle": "Martes 2026-11-10 — Osaka (Día 12)",
         "eventId": "2026-11-10-130-dia-comodin-universal-studios-japan-o-tour-himej",
@@ -45,31 +27,13 @@
         "message": "USJ modelado demasiado corto en Excel — tratar como día completo / comodín, no bloque de 90 min."
       },
       {
-        "date": "2026-11-11",
-        "dayTitle": "Miércoles 2026-11-11 — Osaka → Nagoya → Kanazawa (Día 13)",
-        "eventId": "2026-11-11-139-hotel-en-kanazawa-airbnb",
-        "eventTitle": "Hotel en Kanazawa - Airbnb",
-        "severity": "critical",
-        "code": "confirm_payment",
-        "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
-      },
-      {
-        "date": "2026-11-12",
-        "dayTitle": "Jueves 2026-11-12 — Kanazawa (Día 14)",
-        "eventId": "2026-11-12-148-hotel-en-kanazawa-airbnb",
-        "eventTitle": "Hotel en Kanazawa - Airbnb",
-        "severity": "critical",
-        "code": "confirm_payment",
-        "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
-      },
-      {
         "date": "2026-11-14",
         "dayTitle": "Sábado 2026-11-14 — Tokio (Día 16)",
         "eventId": "2026-11-14-169-hotel-tokyo-2-hotel-yoyogi-uehara",
         "eventTitle": "Hotel Tokyo 2 - Hotel Yoyogi Uehara",
         "severity": "critical",
         "code": "confirm_payment",
-        "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
+        "message": "Hotel Yoyogi Uehara: es el único alojamiento que falta reservar y pagar."
       },
       {
         "date": "2026-11-15",
@@ -78,7 +42,7 @@
         "eventTitle": "Hotel Tokyo 2 - Hotel Yoyogi Uehara",
         "severity": "critical",
         "code": "confirm_payment",
-        "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
+        "message": "Hotel Yoyogi Uehara: es el único alojamiento que falta reservar y pagar."
       },
       {
         "date": "2026-11-16",
@@ -87,7 +51,7 @@
         "eventTitle": "Hotel Tokyo 2 - Hotel Yoyogi Uehara",
         "severity": "critical",
         "code": "confirm_payment",
-        "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
+        "message": "Hotel Yoyogi Uehara: es el único alojamiento que falta reservar y pagar."
       },
       {
         "date": "2026-11-17",
@@ -96,7 +60,7 @@
         "eventTitle": "Hotel Tokyo 2 - Hotel Yoyogi Uehara",
         "severity": "critical",
         "code": "confirm_payment",
-        "message": "Hotel con dirección pero pago/confirmación pendiente (no marcar listo)."
+        "message": "Hotel Yoyogi Uehara: es el único alojamiento que falta reservar y pagar."
       }
     ],
     "high": [
@@ -551,15 +515,6 @@
         "severity": "medium",
         "code": "transfer_only",
         "message": "Nagoya ~5 h entre trenes — escala de conexión, no sightseeing inventado."
-      },
-      {
-        "date": "2026-11-15",
-        "dayTitle": "Domingo 2026-11-15 — Tokio (Día 17)",
-        "eventId": "2026-11-15-174-santuario-meiji-jingu-por-la-mañana-festival-shi",
-        "eventTitle": "Santuario Meiji Jingu por la mañana (Festival Shichi-Go-San con niños en kimono)",
-        "severity": "medium",
-        "code": "crowded",
-        "message": "Meiji en Shichi-Go-San: muchedumbre esperada; llegar temprano o acortar."
       },
       {
         "date": "2026-11-18",

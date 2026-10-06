@@ -666,10 +666,10 @@ def guess_booking(title: str, category: str) -> tuple[str, str]:
     t = title.lower()
     if category == "Hotel":
         ready_hotels = ("establishment", "fujiyoshida", "osaka", "nipponbashi")
-        if any(k in t for k in ready_hotels):
-            return "ready", "Reservado y pagado según Excel (verde)"
-        if "kioto" in t or "kyoto" in t or "kanazawa" in t or "yoyogi" in t:
-            return "needs_reservation", "Dirección en Excel; confirmar si ya está pagado"
+        if any(k in t for k in ready_hotels) or any(k in t for k in ("kioto", "kyoto", "kanazawa")):
+            return "ready", "Reservado y pagado"
+        if "yoyogi" in t:
+            return "needs_reservation", "Único hotel pendiente: falta reservarlo y pagarlo"
         return "needs_reservation", "Confirmar reserva de hotel"
     if "fuji-excursion" in t or "fuji excursion" in t:
         return "ready", "8/8 asientos: E90632 + reserva Sebastián · Kinshicho 07:07"
@@ -681,8 +681,10 @@ def guess_booking(title: str, category: str) -> tuple[str, str]:
         return "needs_ticket", "Los 8 van a Tokyo DisneySea. Falta el 1-Day Passport"
     if "onsen" in t or "yurari" in t:
         return "walk_in", "Pago en sitio; no admite tatuajes"
+    if "shinkansen mishima" in t:
+        return "ready", "Reservado y pagado por Johan. El comprobante está en Splitt"
     if "shinkansen" in t or "limited express" in t:
-        return "needs_reservation", "Johan reserva los Shinkansen"
+        return "needs_reservation", "Todavía no abre la ventana. No hay que reservarlo ahora"
     if "bus estación kawaguchiko" in t or "bus kawaguchiko" in t:
         return "needs_reservation", "Reservar en Fujiyama Connect (~¥2.500)"
     if "ropeway" in t or "teleferico" in t or "teleférico" in t:
@@ -1025,7 +1027,7 @@ def hotel_for_date(date: str) -> dict:
     if date in ("2026-11-04", "2026-11-05"):
         return {
             "name": "Hotel Kioto (Kariganecho)",
-            "group": "Hotel Kioto (Kariganecho) — confirmar pago",
+            "group": "Hotel Kioto (Kariganecho) — reservado y pagado",
             "sergioArley": "Con el grupo",
         }
     if "2026-11-06" <= date <= "2026-11-10":
@@ -1037,13 +1039,13 @@ def hotel_for_date(date: str) -> dict:
     if "2026-11-11" <= date <= "2026-11-13":
         return {
             "name": "Airbnb Kanazawa",
-            "group": "Airbnb Kanazawa — confirmar pago",
+            "group": "Airbnb Kanazawa — reservado y pagado",
             "sergioArley": "Con el grupo",
         }
     if "2026-11-14" <= date <= "2026-11-17":
         return {
             "name": "Hotel Yoyogi Uehara",
-            "group": "Hotel Yoyogi Uehara — confirmar pago",
+            "group": "Hotel Yoyogi Uehara — falta reservar y pagar",
             "sergioArley": "Con el grupo",
         }
     return {"name": "Salida", "group": "Salida", "sergioArley": "Vuelo de regreso"}
@@ -1070,13 +1072,13 @@ def participants_for_tokyo_v1(date: str, title: str) -> list:
             return all_except("sergio", "arley", reason="Duermen en Tobu Levant, Kinshicho")
     if date == "2026-11-02" and "daikoku" in t:
         return only("sergio", "arley", "pipe", "johan", others_reason="No van a Daikoku")
-    # Pipe / Mafalda / Julián salen la noche del 16
-    if date >= "2026-11-17":
+    # Julián, Pipe y Mafalda se regresan el 16. DisneySea es el 15 para que alcancen.
+    if date >= "2026-11-16":
         return all_except(
             "pipe",
             "mafalda",
             "julian",
-            reason="Salen la noche del 16 de noviembre",
+            reason="Se regresan el 16 de noviembre",
         )
     return participants()
 
@@ -1212,6 +1214,14 @@ def estimate_travel(frm: dict | None, to: dict | None, title: str, category: str
         }
 
     # Keep explicit reserved long-haul rails if already marked
+    if "regreso de julián" in t or "día libre en tokio" in t:
+        return existing or {
+            "mode": "none",
+            "durationMin": 0,
+            "notes": "Sin trayecto que calcular",
+            "inferred": False,
+        }
+
     if "disney" in t:
         return {
             "mode": "tren",
@@ -1577,36 +1587,36 @@ def shape_nov2(d: dict) -> None:
 BOOKING_LADDER = [
     {
         "when": "Ahora",
-        "title": "Entradas de Tokyo DisneySea, 16 nov",
-        "detail": "Los ocho van todo el día. El parque figura de 09:00 a 21:00; comprar el 1-Day Passport y reconfirmar el horario en la web oficial.",
+        "title": "Entradas de Tokyo DisneySea, 15 nov",
+        "detail": "Los ocho van todo el día. Es el 15 porque Julián, Pipe y Mafalda se regresan el 16. Falta el 1-Day Passport; reconfirmar el horario del domingo en la web oficial.",
         "href": "https://www.tokyodisneyresort.jp/en/tds/",
         "linkLabel": "DisneySea",
     },
     {
-        "when": "Ahora",
+        "when": "Listo",
         "title": "Shinkansen Mishima → Kioto, 4 nov",
-        "detail": "La venta general de Smart-EX abrió el 4 oct a las 10:00 JST. Sigue sin localizador. La Suica no cubre este asiento.",
+        "detail": "Johan ya lo reservó y lo pagó. El comprobante está en Splitt. La Suica no cubre este asiento.",
         "href": "https://smart-ex.jp/en/",
         "linkLabel": "Smart-EX",
     },
     {
         "when": "11 oct, 10:00 JST",
         "title": "Shinkansen Osaka → Nagoya, 11 nov",
-        "detail": "Misma ventana: un mes antes, a las 10:00 JST. También es Tokaido, así que va en Smart-EX.",
+        "detail": "Todavía no abre. El 11 oct a las 10:00 JST, en Smart-EX. Hoy no hay que reservarlo.",
         "href": "https://smart-ex.jp/en/",
         "linkLabel": "Smart-EX",
     },
     {
         "when": "11 oct, 10:00 JST",
         "title": "Limited Express Shirasagi, 11 nov",
-        "detail": "No se compra en Smart-EX. Es un tren de JR West: reservar en eki-net o en el mostrador de JR West el mismo día que abre la ventana.",
+        "detail": "Todavía no abre. El 11 oct a las 10:00 JST, en eki-net o JR West: no está en Smart-EX. Hoy no hay que reservarlo.",
         "href": "https://www.eki-net.com/en/",
         "linkLabel": "eki-net",
     },
     {
         "when": "14 oct, 10:00 JST",
         "title": "Shinkansen Kanazawa → Tokio, 14 nov",
-        "detail": "Es el Hokuriku, fuera de Smart-EX. Reservar en eki-net. Van con mochila, así que no hace falta asiento de maleta grande.",
+        "detail": "Todavía no abre. El 14 oct a las 10:00 JST, en eki-net: es el Hokuriku, fuera de Smart-EX. Hoy no hay que reservarlo.",
         "href": "https://www.eki-net.com/en/",
         "linkLabel": "eki-net",
     },
@@ -1621,38 +1631,114 @@ BOOKING_LADDER = [
 
 
 def lock_disneysea_day(days: dict) -> None:
-    day = days.get("2026-11-16")
-    if not day:
+    source = days.get("2026-11-16")
+    target = days.get("2026-11-15")
+    if not source or not target:
         return
-    day["events"] = [
-        event
-        for event in day["events"]
-        if "actividad libre" not in event["title"].lower()
-    ]
-    day["summary"] = (
-        "Los ocho van a Tokyo DisneySea todo el día. "
-        "Salida del hotel hacia las 08:00; el parque figura de 09:00 a 21:00. Falta comprar las entradas."
+    disney = next(
+        (event for event in source["events"] if "disney" in event["title"].lower()),
+        None,
     )
-    for event in day["events"]:
-        if "disney" not in event["title"].lower():
-            continue
-        event["title"] = "Tokyo DisneySea"
-        event["start"] = "08:00"
-        event["end"] = "21:00"
-        event["inferred"] = False
-        event["scheduleLocked"] = True
-        event["bookingStatus"] = "needs_ticket"
-        event["bookingDetail"] = "Los 8 van. Falta comprar el 1-Day Passport"
-        event["to"] = place("disney_sea")
-        event["description"] = (
-            "Día completo para los ocho. El 16 nov 2026 Tokyo DisneySea figura abierto de 09:00 a 21:00; "
-            "reconfirmarlo en tokyodisneyresort.jp porque el horario puede cambiar. "
-            "Salir del Hotel Yoyogi-Uehara hacia las 08:00 y tomar el tren a Maihama, unos 75 minutos con transbordo, "
-            "para estar en la entrada a la apertura. Comprar el 1-Day Passport de adulto antes de ir. "
-            "Comer dentro del parque y salir con margen para volver al hotel."
+    source["events"] = [
+        event
+        for event in source["events"]
+        if event is not disney and "actividad libre" not in event["title"].lower()
+    ]
+    target["events"] = [
+        event for event in target["events"] if event.get("category") == "hotel"
+    ]
+    target["summary"] = (
+        "Los ocho van a Tokyo DisneySea. Es el 15, no el 16, porque Julián, Pipe y Mafalda se regresan al día siguiente. "
+        "Salida del hotel hacia las 08:00. Falta comprar las entradas."
+    )
+    if disney:
+        disney["title"] = "Tokyo DisneySea"
+        disney["start"] = "08:00"
+        disney["end"] = "21:00"
+        disney["inferred"] = False
+        disney["scheduleLocked"] = True
+        disney["bookingStatus"] = "needs_ticket"
+        disney["bookingDetail"] = "Los 8 van el 15 nov. Falta comprar el 1-Day Passport"
+        disney["to"] = place("disney_sea")
+        disney["participants"] = participants()
+        disney["description"] = (
+            "Día completo para los ocho, domingo 15 de noviembre. "
+            "Reconfirmar el horario de ese domingo en tokyodisneyresort.jp antes de comprar. "
+            "Salir del Hotel Yoyogi-Uehara hacia las 08:00 y tomar el tren a Maihama, unos 75 minutos con transbordo. "
+            "Comprar el 1-Day Passport de adulto antes de ir. "
+            "Comer dentro del parque y salir con margen para volver al hotel. "
+            "Julián, Pipe y Mafalda se regresan el 16, así que este es su último día con el grupo."
         )
-        event["bring"] = ["Entrada digital", "Batería externa", "Chaqueta"]
-        event["dontBring"] = ["Maleta grande"]
+        disney["bring"] = ["Entrada digital", "Batería externa", "Chaqueta"]
+        disney["dontBring"] = ["Maleta grande"]
+        target["events"].insert(0, disney)
+
+    source["summary"] = (
+        "Julián, Pipe y Mafalda se regresan. "
+        "Sergio, Arley, Johan, Tatiana y Sebastián se quedan en Tokio, sin un plan cerrado."
+    )
+    source["events"].insert(
+        0,
+        {
+            "id": "2026-11-16-dia-libre",
+            "start": "10:00",
+            "end": "18:00",
+            "inferred": False,
+            "scheduleLocked": True,
+            "track": "stay",
+            "title": "Día libre en Tokio",
+            "category": "visita",
+            "description": (
+                "Sin plan cerrado para quienes se quedan. "
+                "El paseo de Meiji, Harajuku y Shibuya que estaba en el 15 sale del calendario porque ese día es DisneySea."
+            ),
+            "from": place("yoyogi_hotel"),
+            "to": place("yoyogi_hotel"),
+            "travel": {"mode": "walk", "durationMin": 0, "notes": "Salen y vuelven al hotel"},
+            "participants": all_except(
+                "pipe", "mafalda", "julian", reason="Se regresan el 16 de noviembre"
+            ),
+            "bookingStatus": "walk_in",
+            "bookingDetail": "Nada que reservar",
+            "costs": [],
+            "reservation": "",
+            "image": "",
+            "bring": [],
+            "dontBring": [],
+            "source": "grupo",
+        },
+    )
+    source["events"].insert(
+        0,
+        {
+            "id": "2026-11-16-regreso",
+            "start": "09:00",
+            "end": "12:00",
+            "inferred": True,
+            "scheduleLocked": True,
+            "track": "departure",
+            "title": "Regreso de Julián, Pipe y Mafalda",
+            "category": "transporte",
+            "description": (
+                "Se regresan el 16 de noviembre. Por eso DisneySea quedó el 15, con los ocho. "
+                "El horario del vuelo no está en el plan."
+            ),
+            "from": place("yoyogi_hotel"),
+            "to": place("yoyogi_hotel"),
+            "travel": {"mode": "taxi", "durationMin": 0, "notes": "Horario de vuelo pendiente"},
+            "participants": only(
+                "pipe", "julian", "mafalda", others_reason="Se quedan en Tokio"
+            ),
+            "bookingStatus": "na",
+            "bookingDetail": "El vuelo no está cargado en el plan",
+            "costs": [],
+            "reservation": "",
+            "image": "",
+            "bring": ["Pasaporte", "Equipaje"],
+            "dontBring": [],
+            "source": "grupo",
+        },
+    )
 
 
 def append_note(event: dict, note: str) -> None:
@@ -1683,7 +1769,8 @@ def apply_trip_planner_checks(day_list: list) -> None:
     if move:
         move["summary"] = (
             "El ancla es el bus de las 14:00 a Mishima, todavía sin reservar. "
-            "La calle y el santuario de la mañana se saltan si van tarde. El Shinkansen Mishima–Kioto ya se puede comprar en Smart-EX."
+            "La calle y el santuario de la mañana se saltan si van tarde. "
+            "El Shinkansen Mishima–Kioto ya está reservado y pagado por Johan; el comprobante está en Splitt."
         )
         for event in move["events"]:
             title = event["title"].lower()
@@ -1698,9 +1785,11 @@ def apply_trip_planner_checks(day_list: list) -> None:
                     "Ancla del día. Reservar en Fujiyama Connect antes de salir de Tokio. Sin este asiento no hay Shinkansen.",
                 )
             if "shinkansen mishima" in title:
+                event["bookingStatus"] = "ready"
+                event["bookingDetail"] = "Reservado y pagado por Johan. El comprobante está en Splitt"
                 append_note(
                     event,
-                    "Comprar ya en Smart-EX: la ventana general abrió el 4 oct a las 10:00 JST. La Suica no paga este tramo.",
+                    "Johan ya lo reservó y lo pagó. El comprobante está en Splitt. La Suica no paga este tramo.",
                 )
 
     monday = by_date.get("2026-11-09")
@@ -1724,12 +1813,12 @@ def apply_trip_planner_checks(day_list: list) -> None:
             if "osaka - nagoya" in title:
                 append_note(
                     event,
-                    "Reservar el 11 oct a las 10:00 JST en Smart-EX. La Suica no cubre el asiento.",
+                    "Todavía no abre. El 11 oct a las 10:00 JST, en Smart-EX. Hoy no hay que reservarlo. La Suica no cubre el asiento.",
                 )
             if "shirasagi" in title:
                 append_note(
                     event,
-                    "No está en Smart-EX. Reservar el 11 oct a las 10:00 JST en eki-net o JR West.",
+                    "Todavía no abre. El 11 oct a las 10:00 JST, en eki-net o JR West. Hoy no hay que reservarlo.",
                 )
 
     back = by_date.get("2026-11-14")
@@ -1738,7 +1827,7 @@ def apply_trip_planner_checks(day_list: list) -> None:
             if "kanazawa - tokyo" in event["title"].lower():
                 append_note(
                     event,
-                    "Es el Shinkansen Hokuriku: no se compra en Smart-EX. Reservar el 14 oct a las 10:00 JST en eki-net.",
+                    "Todavía no abre. El 14 oct a las 10:00 JST, en eki-net: es el Hokuriku y no se compra en Smart-EX. Hoy no hay que reservarlo.",
                 )
 
 
