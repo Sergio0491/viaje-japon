@@ -678,7 +678,7 @@ def guess_booking(title: str, category: str) -> tuple[str, str]:
     if "kabuki" in t:
         return "needs_ticket", "Opcional: comprar el 31 oct o en taquilla"
     if "disney" in t:
-        return "needs_ticket", "Decisión pendiente; no hay tickets"
+        return "needs_ticket", "Los 8 van a Tokyo DisneySea. Falta el 1-Day Passport"
     if "onsen" in t or "yurari" in t:
         return "walk_in", "Pago en sitio; no admite tatuajes"
     if "shinkansen" in t or "limited express" in t:
@@ -986,7 +986,7 @@ def description_for(title: str, category: str, start: str | None, end: str | Non
         (("ginkgo",), "Caminar la avenida y el festival. Esperar mucha gente y conservar margen para Shibuya."),
         (("shibuya",), "Ver Hachiko, cruzar el scramble y recorrer las calles cercanas. Reagruparse junto a Hachiko."),
         (("nogi",), "Visitar el santuario y cenar en la zona. Última actividad: no añadir otra parada distante."),
-        (("disney sea",), "Solo hacerlo si el grupo decide dedicarle el día completo y compra entradas. Si no, convertir el día en jornada libre real."),
+        (("disney",), "Los ocho van a Tokyo DisneySea todo el día. Salir del hotel hacia las 08:00 para estar en la entrada a las 09:00. Comprar el 1-Day Passport antes; ese día no hay plan B."),
         (("actividad libre",), "Bloque sin actividad cerrada. Elegir algo cercano al hotel o descansar; no asumir que todo el grupo hará lo mismo."),
     ]
     for keys, plan in plans:
@@ -1212,6 +1212,14 @@ def estimate_travel(frm: dict | None, to: dict | None, title: str, category: str
         }
 
     # Keep explicit reserved long-haul rails if already marked
+    if "disney" in t:
+        return {
+            "mode": "tren",
+            "durationMin": 75,
+            "notes": "Yoyogi-Uehara → Maihama, con transbordo. Salir hacia las 08:00.",
+            "inferred": False,
+        }
+
     if any(k in t for k in ("shinkansen", "fuji-excursion", "fuji excursion", "limited express", "shirasagi")):
         if existing.get("durationMin") and existing.get("mode") in ("tren", "metro"):
             out = dict(existing)
@@ -1569,6 +1577,13 @@ def shape_nov2(d: dict) -> None:
 BOOKING_LADDER = [
     {
         "when": "Ahora",
+        "title": "Entradas de Tokyo DisneySea, 16 nov",
+        "detail": "Los ocho van todo el día. El parque figura de 09:00 a 21:00; comprar el 1-Day Passport y reconfirmar el horario en la web oficial.",
+        "href": "https://www.tokyodisneyresort.jp/en/tds/",
+        "linkLabel": "DisneySea",
+    },
+    {
+        "when": "Ahora",
         "title": "Shinkansen Mishima → Kioto, 4 nov",
         "detail": "La venta general de Smart-EX abrió el 4 oct a las 10:00 JST. Sigue sin localizador. La Suica no cubre este asiento.",
         "href": "https://smart-ex.jp/en/",
@@ -1603,6 +1618,41 @@ BOOKING_LADDER = [
         "linkLabel": "Ver el día",
     },
 ]
+
+
+def lock_disneysea_day(days: dict) -> None:
+    day = days.get("2026-11-16")
+    if not day:
+        return
+    day["events"] = [
+        event
+        for event in day["events"]
+        if "actividad libre" not in event["title"].lower()
+    ]
+    day["summary"] = (
+        "Los ocho van a Tokyo DisneySea todo el día. "
+        "Salida del hotel hacia las 08:00; el parque figura de 09:00 a 21:00. Falta comprar las entradas."
+    )
+    for event in day["events"]:
+        if "disney" not in event["title"].lower():
+            continue
+        event["title"] = "Tokyo DisneySea"
+        event["start"] = "08:00"
+        event["end"] = "21:00"
+        event["inferred"] = False
+        event["scheduleLocked"] = True
+        event["bookingStatus"] = "needs_ticket"
+        event["bookingDetail"] = "Los 8 van. Falta comprar el 1-Day Passport"
+        event["to"] = place("disney_sea")
+        event["description"] = (
+            "Día completo para los ocho. El 16 nov 2026 Tokyo DisneySea figura abierto de 09:00 a 21:00; "
+            "reconfirmarlo en tokyodisneyresort.jp porque el horario puede cambiar. "
+            "Salir del Hotel Yoyogi-Uehara hacia las 08:00 y tomar el tren a Maihama, unos 75 minutos con transbordo, "
+            "para estar en la entrada a la apertura. Comprar el 1-Day Passport de adulto antes de ir. "
+            "Comer dentro del parque y salir con margen para volver al hotel."
+        )
+        event["bring"] = ["Entrada digital", "Batería externa", "Chaqueta"]
+        event["dontBring"] = ["Maleta grande"]
 
 
 def append_note(event: dict, note: str) -> None:
@@ -2070,6 +2120,7 @@ def main():
             days[date]["events"].append(ev)
 
     inject_special_events(days)
+    lock_disneysea_day(days)
 
     for day in days.values():
         if day["summary"].startswith("Plan del grupo") and day["events"]:

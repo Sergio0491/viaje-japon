@@ -51,6 +51,13 @@
     "bookingLadder": [
       {
         "when": "Ahora",
+        "title": "Entradas de Tokyo DisneySea, 16 nov",
+        "detail": "Los ocho van todo el día. El parque figura de 09:00 a 21:00; comprar el 1-Day Passport y reconfirmar el horario en la web oficial.",
+        "href": "https://www.tokyodisneyresort.jp/en/tds/",
+        "linkLabel": "DisneySea"
+      },
+      {
+        "when": "Ahora",
         "title": "Shinkansen Mishima → Kioto, 4 nov",
         "detail": "La venta general de Smart-EX abrió el 4 oct a las 10:00 JST. Sigue sin localizador. La Suica no cubre este asiento.",
         "href": "https://smart-ex.jp/en/",
@@ -85,7 +92,7 @@
         "linkLabel": "Ver el día"
       }
     ],
-    "generatedAt": "2026-10-05T19:33:20",
+    "generatedAt": "2026-10-05T19:47:55",
     "auditCounts": {
       "critical": 10,
       "high": 37,
@@ -12453,7 +12460,7 @@
       "weekday": "lunes",
       "title": "Lunes 2026-11-16 — Tokio (Día 18)",
       "city": "Tokio",
-      "summary": "4 paradas · Empieza con Disney sea?.",
+      "summary": "Los ocho van a Tokyo DisneySea todo el día. Salida del hotel hacia las 08:00; el parque figura de 09:00 a 21:00. Falta comprar las entradas.",
       "mapCenter": {
         "name": "Hotel Yoyogi Uehara",
         "query": "Hotel Yoyogi Uehara 17 Oyamacho Shibuya",
@@ -12468,15 +12475,15 @@
       "events": [
         {
           "id": "2026-11-16-185-disney-sea",
-          "start": "09:00",
-          "end": "10:30",
-          "inferred": true,
-          "title": "Disney sea?",
+          "start": "08:00",
+          "end": "21:00",
+          "inferred": false,
+          "title": "Tokyo DisneySea",
           "category": "visita",
           "track": "all",
           "endOfDay": false,
           "flags": [],
-          "description": "Solo hacerlo si el grupo decide dedicarle el día completo y compra entradas. Si no, convertir el día en jornada libre real.",
+          "description": "Día completo para los ocho. El 16 nov 2026 Tokyo DisneySea figura abierto de 09:00 a 21:00; reconfirmarlo en tokyodisneyresort.jp porque el horario puede cambiar. Salir del Hotel Yoyogi-Uehara hacia las 08:00 y tomar el tren a Maihama, unos 75 minutos con transbordo, para estar en la entrada a la apertura. Comprar el 1-Day Passport de adulto antes de ir. Comer dentro del parque y salir con margen para volver al hotel.",
           "from": {
             "name": "Hotel Yoyogi Uehara",
             "query": "Hotel Yoyogi Uehara 17 Oyamacho Shibuya",
@@ -12491,11 +12498,9 @@
           },
           "travel": {
             "mode": "tren",
-            "durationMin": 44,
-            "notes": "Tren/bus ~19.9 km · a pie ~287 min (no recomendado)",
-            "distanceKm": 19.92,
-            "walkDurationMin": 287,
-            "inferred": true
+            "durationMin": 75,
+            "notes": "Yoyogi-Uehara → Maihama, con transbordo. Salir hacia las 08:00.",
+            "inferred": false
           },
           "participants": [
             {
@@ -12540,168 +12545,21 @@
             }
           ],
           "bookingStatus": "needs_ticket",
-          "bookingDetail": "Decisión pendiente; no hay tickets",
+          "bookingDetail": "Los 8 van. Falta comprar el 1-Day Passport",
           "costs": [],
           "reservation": "",
           "image": "../img/disneysea.jpg",
           "imageCredit": "",
-          "bring": [],
-          "dontBring": [],
-          "source": "excel"
-        },
-        {
-          "id": "2026-11-16-186-actividad-libre-en-tokyo",
-          "start": "10:55",
-          "end": "12:25",
-          "inferred": true,
-          "title": "Actividad libre en tokyo",
-          "category": "visita",
-          "track": "all",
-          "endOfDay": false,
-          "flags": [],
-          "description": "Bloque sin actividad cerrada. Elegir algo cercano al hotel o descansar; no asumir que todo el grupo hará lo mismo.",
-          "from": {
-            "name": "Tokyo DisneySea",
-            "query": "Tokyo DisneySea",
-            "lat": 35.6267,
-            "lng": 139.8851
-          },
-          "to": null,
-          "travel": {
-            "mode": "walk",
-            "durationMin": 15,
-            "notes": "Caminata o trayecto corto desde el anterior",
-            "inferred": true
-          },
-          "participants": [
-            {
-              "id": "sergio",
-              "name": "Sergio Valencia",
-              "going": true
-            },
-            {
-              "id": "arley",
-              "name": "Arley Vásquez",
-              "going": true
-            },
-            {
-              "id": "pipe",
-              "name": "Pipe Escobar",
-              "going": true
-            },
-            {
-              "id": "johan",
-              "name": "Johan Bolívar",
-              "going": true
-            },
-            {
-              "id": "julian",
-              "name": "Julián Otalvaro",
-              "going": true
-            },
-            {
-              "id": "mafalda",
-              "name": "Mafalda",
-              "going": true
-            },
-            {
-              "id": "tatiana",
-              "name": "Tatiana Betancur",
-              "going": true
-            },
-            {
-              "id": "sebastian",
-              "name": "Sebastián Vargas",
-              "going": true
-            }
+          "bring": [
+            "Entrada digital",
+            "Batería externa",
+            "Chaqueta"
           ],
-          "bookingStatus": "walk_in",
-          "bookingDetail": "Sin reserva previa",
-          "costs": [],
-          "reservation": "",
-          "image": "../img/tokyo-free.jpg",
-          "imageCredit": "",
-          "bring": [],
-          "dontBring": [],
-          "source": "excel",
-          "reflowed": true
-        },
-        {
-          "id": "2026-11-16-187-actividad-libre-en-tokyo",
-          "start": "12:50",
-          "end": "14:20",
-          "inferred": true,
-          "title": "Actividad libre en tokyo",
-          "category": "visita",
-          "track": "all",
-          "endOfDay": false,
-          "flags": [],
-          "description": "Bloque sin actividad cerrada. Elegir algo cercano al hotel o descansar; no asumir que todo el grupo hará lo mismo.",
-          "from": {
-            "name": "Tokyo DisneySea",
-            "query": "Tokyo DisneySea",
-            "lat": 35.6267,
-            "lng": 139.8851
-          },
-          "to": null,
-          "travel": {
-            "mode": "walk",
-            "durationMin": 15,
-            "notes": "Caminata o trayecto corto desde el anterior",
-            "inferred": true
-          },
-          "participants": [
-            {
-              "id": "sergio",
-              "name": "Sergio Valencia",
-              "going": true
-            },
-            {
-              "id": "arley",
-              "name": "Arley Vásquez",
-              "going": true
-            },
-            {
-              "id": "pipe",
-              "name": "Pipe Escobar",
-              "going": true
-            },
-            {
-              "id": "johan",
-              "name": "Johan Bolívar",
-              "going": true
-            },
-            {
-              "id": "julian",
-              "name": "Julián Otalvaro",
-              "going": true
-            },
-            {
-              "id": "mafalda",
-              "name": "Mafalda",
-              "going": true
-            },
-            {
-              "id": "tatiana",
-              "name": "Tatiana Betancur",
-              "going": true
-            },
-            {
-              "id": "sebastian",
-              "name": "Sebastián Vargas",
-              "going": true
-            }
+          "dontBring": [
+            "Maleta grande"
           ],
-          "bookingStatus": "walk_in",
-          "bookingDetail": "Sin reserva previa",
-          "costs": [],
-          "reservation": "",
-          "image": "../img/tokyo-free.jpg",
-          "imageCredit": "",
-          "bring": [],
-          "dontBring": [],
           "source": "excel",
-          "reflowed": true
+          "scheduleLocked": true
         },
         {
           "id": "2026-11-16-188-hotel-tokyo-2-hotel-yoyogi-uehara",
