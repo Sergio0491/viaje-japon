@@ -92,7 +92,7 @@
         "linkLabel": "Ver el día"
       }
     ],
-    "generatedAt": "2026-10-05T20:27:10",
+    "generatedAt": "2026-10-05T20:34:12",
     "auditCounts": {
       "critical": 6,
       "high": 37,
@@ -12000,7 +12000,7 @@
       "weekday": "lunes",
       "title": "Lunes 2026-11-16 — Tokio (Día 18)",
       "city": "Tokio",
-      "summary": "Julián, Pipe y Mafalda se regresan. Sergio, Arley, Johan, Tatiana y Sebastián se quedan en Tokio, sin un plan cerrado.",
+      "summary": "Julián, Pipe y Mafalda se regresan. Sergio, Arley, Johan, Tatiana y Sebastián hacen el paseo de Meiji, Harajuku y Shibuya.",
       "mapCenter": {
         "name": "Hotel Yoyogi Uehara",
         "query": "Hotel Yoyogi Uehara 17 Oyamacho Shibuya",
@@ -12097,26 +12097,35 @@
           "imageCredit": ""
         },
         {
-          "id": "2026-11-16-dia-libre",
-          "start": "10:00",
-          "end": "18:00",
-          "inferred": false,
-          "scheduleLocked": true,
-          "track": "stay",
-          "title": "Día libre en Tokio",
+          "id": "2026-11-16-174-santuario-meiji-jingu-por-la-mañana-festival-shi",
+          "start": "09:00",
+          "end": "10:30",
+          "inferred": true,
+          "title": "Santuario Meiji Jingu por la mañana",
           "category": "visita",
-          "description": "Sin plan cerrado para quienes se quedan. El paseo de Meiji, Harajuku y Shibuya que estaba en el 15 sale del calendario porque ese día es DisneySea.",
-          "from": null,
-          "to": {
+          "track": "stay",
+          "endOfDay": false,
+          "flags": [],
+          "description": "Entran por el gran torii y recorren el santuario. Shichi-Go-San fue el domingo 15, el día de DisneySea, así que este lunes puede estar más tranquilo.",
+          "from": {
             "name": "Hotel Yoyogi Uehara",
             "query": "Hotel Yoyogi Uehara 17 Oyamacho Shibuya",
             "lat": 35.6682854,
             "lng": 139.6706681
           },
+          "to": {
+            "name": "Meiji Jingu",
+            "query": "Meiji Jingu Shrine Tokyo",
+            "lat": 35.6764,
+            "lng": 139.6993
+          },
           "travel": {
-            "mode": "walk",
-            "durationMin": 0,
-            "notes": "Salen y vuelven al hotel"
+            "mode": "metro",
+            "durationMin": 19,
+            "notes": "Metro/tren local ~2.7 km · a pie serían ~42 min",
+            "distanceKm": 2.74,
+            "walkDurationMin": 42,
+            "inferred": true
           },
           "participants": [
             {
@@ -12164,15 +12173,464 @@
             }
           ],
           "bookingStatus": "walk_in",
-          "bookingDetail": "Nada que reservar",
+          "bookingDetail": "Entrada gratuita o donación",
           "costs": [],
           "reservation": "",
-          "image": "../img/tokyo-free.jpg",
+          "image": "../img/meiji.jpg",
+          "imageCredit": "",
+          "bring": [
+            "Ropa cómoda que cubra hombros",
+            "Monedas para ofrenda"
+          ],
+          "dontBring": [
+            "Sombrero dentro del santuario",
+            "Fotos donde esté prohibido"
+          ],
+          "source": "excel"
+        },
+        {
+          "id": "2026-11-16-175-parque-yoyogi-aca-mismo-esta-el-santuario-realme",
+          "start": "10:52",
+          "end": "12:22",
+          "inferred": true,
+          "title": "Parque Yoyogi (aca mismo esta el Santuario realmente)",
+          "category": "visita",
+          "track": "stay",
+          "endOfDay": false,
+          "flags": [],
+          "description": "Paseo y descanso después del santuario. Recortar este bloque si el día va retrasado.",
+          "from": {
+            "name": "Meiji Jingu",
+            "query": "Meiji Jingu Shrine Tokyo",
+            "lat": 35.6764,
+            "lng": 139.6993
+          },
+          "to": {
+            "name": "Yoyogi Park",
+            "query": "Yoyogi Park Tokyo",
+            "lat": 35.6717,
+            "lng": 139.695
+          },
+          "travel": {
+            "mode": "walk",
+            "durationMin": 12,
+            "notes": "Caminata ~0.7 km",
+            "distanceKm": 0.65,
+            "inferred": true
+          },
+          "participants": [
+            {
+              "id": "sergio",
+              "name": "Sergio Valencia",
+              "going": true
+            },
+            {
+              "id": "arley",
+              "name": "Arley Vásquez",
+              "going": true
+            },
+            {
+              "id": "pipe",
+              "name": "Pipe Escobar",
+              "going": false,
+              "reason": "Se regresan el 16 de noviembre"
+            },
+            {
+              "id": "johan",
+              "name": "Johan Bolívar",
+              "going": true
+            },
+            {
+              "id": "julian",
+              "name": "Julián Otalvaro",
+              "going": false,
+              "reason": "Se regresan el 16 de noviembre"
+            },
+            {
+              "id": "mafalda",
+              "name": "Mafalda",
+              "going": false,
+              "reason": "Se regresan el 16 de noviembre"
+            },
+            {
+              "id": "tatiana",
+              "name": "Tatiana Betancur",
+              "going": true
+            },
+            {
+              "id": "sebastian",
+              "name": "Sebastián Vargas",
+              "going": true
+            }
+          ],
+          "bookingStatus": "needs_ticket",
+          "bookingDetail": "Entrada en taquilla el mismo día",
+          "costs": [],
+          "reservation": "",
+          "image": "../img/yoyogi-park.jpg",
+          "imageCredit": "",
+          "bring": [
+            "Ropa cómoda que cubra hombros",
+            "Monedas para ofrenda"
+          ],
+          "dontBring": [
+            "Sombrero dentro del santuario",
+            "Fotos donde esté prohibido"
+          ],
+          "source": "excel",
+          "reflowed": true
+        },
+        {
+          "id": "2026-11-16-176-harajuki-y-omotesando-caminata-por-el-barrio",
+          "start": "12:45",
+          "end": "14:15",
+          "inferred": true,
+          "title": "Harajuki y Omotesando caminata por el barrio",
+          "category": "visita",
+          "track": "stay",
+          "endOfDay": false,
+          "flags": [],
+          "description": "Recorrer Takeshita y continuar hacia Omotesando. Definir tiempo libre y punto de encuentro.",
+          "from": {
+            "name": "Yoyogi Park",
+            "query": "Yoyogi Park Tokyo",
+            "lat": 35.6717,
+            "lng": 139.695
+          },
+          "to": {
+            "name": "Harajuku / Omotesando",
+            "query": "Harajuku Station Tokyo",
+            "lat": 35.6702,
+            "lng": 139.7026
+          },
+          "travel": {
+            "mode": "walk",
+            "durationMin": 13,
+            "notes": "Caminata ~0.7 km",
+            "distanceKm": 0.71,
+            "inferred": true
+          },
+          "participants": [
+            {
+              "id": "sergio",
+              "name": "Sergio Valencia",
+              "going": true
+            },
+            {
+              "id": "arley",
+              "name": "Arley Vásquez",
+              "going": true
+            },
+            {
+              "id": "pipe",
+              "name": "Pipe Escobar",
+              "going": false,
+              "reason": "Se regresan el 16 de noviembre"
+            },
+            {
+              "id": "johan",
+              "name": "Johan Bolívar",
+              "going": true
+            },
+            {
+              "id": "julian",
+              "name": "Julián Otalvaro",
+              "going": false,
+              "reason": "Se regresan el 16 de noviembre"
+            },
+            {
+              "id": "mafalda",
+              "name": "Mafalda",
+              "going": false,
+              "reason": "Se regresan el 16 de noviembre"
+            },
+            {
+              "id": "tatiana",
+              "name": "Tatiana Betancur",
+              "going": true
+            },
+            {
+              "id": "sebastian",
+              "name": "Sebastián Vargas",
+              "going": true
+            }
+          ],
+          "bookingStatus": "walk_in",
+          "bookingDetail": "Sin reserva previa",
+          "costs": [],
+          "reservation": "",
+          "image": "../img/harajuku.jpg",
+          "imageCredit": "",
           "bring": [],
           "dontBring": [],
-          "source": "grupo",
+          "source": "excel",
+          "reflowed": true
+        },
+        {
+          "id": "2026-11-16-177-avenida-de-árboles-ginkgo-del-jingu-gaien-con-fe",
+          "start": "14:51",
+          "end": "16:21",
+          "inferred": true,
+          "title": "Avenida de Árboles Ginkgo del Jingu Gaien",
+          "category": "visita",
+          "track": "stay",
+          "endOfDay": false,
           "flags": [],
-          "imageCredit": ""
+          "description": "Caminan la avenida de ginkgos de Jingu Gaien. La temporada sigue a mediados de noviembre; el pico del fin de semana ya pasó. Conservar margen para Shibuya.",
+          "from": {
+            "name": "Harajuku / Omotesando",
+            "query": "Harajuku Station Tokyo",
+            "lat": 35.6702,
+            "lng": 139.7026
+          },
+          "to": {
+            "name": "Jingu Gaien Ginkgo Avenue",
+            "query": "Jingu Gaien Ginkgo Avenue Tokyo",
+            "lat": 35.6785,
+            "lng": 139.7175
+          },
+          "travel": {
+            "mode": "walk",
+            "durationMin": 26,
+            "notes": "Caminata ~1.6 km",
+            "distanceKm": 1.63,
+            "inferred": true
+          },
+          "participants": [
+            {
+              "id": "sergio",
+              "name": "Sergio Valencia",
+              "going": true
+            },
+            {
+              "id": "arley",
+              "name": "Arley Vásquez",
+              "going": true
+            },
+            {
+              "id": "pipe",
+              "name": "Pipe Escobar",
+              "going": false,
+              "reason": "Se regresan el 16 de noviembre"
+            },
+            {
+              "id": "johan",
+              "name": "Johan Bolívar",
+              "going": true
+            },
+            {
+              "id": "julian",
+              "name": "Julián Otalvaro",
+              "going": false,
+              "reason": "Se regresan el 16 de noviembre"
+            },
+            {
+              "id": "mafalda",
+              "name": "Mafalda",
+              "going": false,
+              "reason": "Se regresan el 16 de noviembre"
+            },
+            {
+              "id": "tatiana",
+              "name": "Tatiana Betancur",
+              "going": true
+            },
+            {
+              "id": "sebastian",
+              "name": "Sebastián Vargas",
+              "going": true
+            }
+          ],
+          "bookingStatus": "walk_in",
+          "bookingDetail": "Sin reserva previa",
+          "costs": [],
+          "reservation": "",
+          "image": "../img/ginkgo.jpg",
+          "imageCredit": "",
+          "bring": [],
+          "dontBring": [],
+          "source": "excel",
+          "reflowed": true
+        },
+        {
+          "id": "2026-11-16-178-shibuya-recorrer-calles-y-estatua-de-hachiko",
+          "start": "16:50",
+          "end": "18:20",
+          "inferred": true,
+          "title": "Shibuya (recorrer calles y estatua de Hachiko)",
+          "category": "visita",
+          "track": "stay",
+          "endOfDay": false,
+          "flags": [],
+          "description": "Ver Hachiko, cruzar el scramble y recorrer las calles cercanas. Reagruparse junto a Hachiko.",
+          "from": {
+            "name": "Jingu Gaien Ginkgo Avenue",
+            "query": "Jingu Gaien Ginkgo Avenue Tokyo",
+            "lat": 35.6785,
+            "lng": 139.7175
+          },
+          "to": {
+            "name": "Shibuya Crossing",
+            "query": "Shibuya Crossing Tokyo",
+            "lat": 35.6595,
+            "lng": 139.7005
+          },
+          "travel": {
+            "mode": "metro",
+            "durationMin": 19,
+            "notes": "Metro/tren local ~2.6 km · a pie serían ~40 min",
+            "distanceKm": 2.61,
+            "walkDurationMin": 40,
+            "inferred": true
+          },
+          "participants": [
+            {
+              "id": "sergio",
+              "name": "Sergio Valencia",
+              "going": true
+            },
+            {
+              "id": "arley",
+              "name": "Arley Vásquez",
+              "going": true
+            },
+            {
+              "id": "pipe",
+              "name": "Pipe Escobar",
+              "going": false,
+              "reason": "Se regresan el 16 de noviembre"
+            },
+            {
+              "id": "johan",
+              "name": "Johan Bolívar",
+              "going": true
+            },
+            {
+              "id": "julian",
+              "name": "Julián Otalvaro",
+              "going": false,
+              "reason": "Se regresan el 16 de noviembre"
+            },
+            {
+              "id": "mafalda",
+              "name": "Mafalda",
+              "going": false,
+              "reason": "Se regresan el 16 de noviembre"
+            },
+            {
+              "id": "tatiana",
+              "name": "Tatiana Betancur",
+              "going": true
+            },
+            {
+              "id": "sebastian",
+              "name": "Sebastián Vargas",
+              "going": true
+            }
+          ],
+          "bookingStatus": "walk_in",
+          "bookingDetail": "Sin reserva previa",
+          "costs": [],
+          "reservation": "",
+          "image": "../img/shibuya.jpg",
+          "imageCredit": "",
+          "bring": [],
+          "dontBring": [],
+          "source": "excel",
+          "reflowed": true
+        },
+        {
+          "id": "2026-11-16-179-santuario-nogi-y-cena-en-la-zona",
+          "start": "18:50",
+          "end": "20:20",
+          "inferred": true,
+          "title": "Santuario Nogi y cena en la zona",
+          "category": "visita",
+          "track": "stay",
+          "endOfDay": false,
+          "flags": [],
+          "description": "Visitar el santuario y cenar en la zona. Última actividad: no añadir otra parada distante.",
+          "from": {
+            "name": "Shibuya Crossing",
+            "query": "Shibuya Crossing Tokyo",
+            "lat": 35.6595,
+            "lng": 139.7005
+          },
+          "to": {
+            "name": "Nogi Shrine",
+            "query": "Nogi Shrine Minato Tokyo",
+            "lat": 35.669,
+            "lng": 139.7335
+          },
+          "travel": {
+            "mode": "metro",
+            "durationMin": 20,
+            "notes": "Metro/tren local ~3.2 km · a pie serían ~48 min",
+            "distanceKm": 3.16,
+            "walkDurationMin": 48,
+            "inferred": true
+          },
+          "participants": [
+            {
+              "id": "sergio",
+              "name": "Sergio Valencia",
+              "going": true
+            },
+            {
+              "id": "arley",
+              "name": "Arley Vásquez",
+              "going": true
+            },
+            {
+              "id": "pipe",
+              "name": "Pipe Escobar",
+              "going": false,
+              "reason": "Se regresan el 16 de noviembre"
+            },
+            {
+              "id": "johan",
+              "name": "Johan Bolívar",
+              "going": true
+            },
+            {
+              "id": "julian",
+              "name": "Julián Otalvaro",
+              "going": false,
+              "reason": "Se regresan el 16 de noviembre"
+            },
+            {
+              "id": "mafalda",
+              "name": "Mafalda",
+              "going": false,
+              "reason": "Se regresan el 16 de noviembre"
+            },
+            {
+              "id": "tatiana",
+              "name": "Tatiana Betancur",
+              "going": true
+            },
+            {
+              "id": "sebastian",
+              "name": "Sebastián Vargas",
+              "going": true
+            }
+          ],
+          "bookingStatus": "needs_ticket",
+          "bookingDetail": "Entrada en taquilla el mismo día",
+          "costs": [],
+          "reservation": "",
+          "image": "../img/nogi.jpg",
+          "imageCredit": "",
+          "bring": [
+            "Ropa cómoda que cubra hombros",
+            "Monedas para ofrenda"
+          ],
+          "dontBring": [
+            "Sombrero dentro del santuario",
+            "Fotos donde esté prohibido"
+          ],
+          "source": "excel",
+          "reflowed": true
         },
         {
           "id": "2026-11-16-188-hotel-tokyo-2-hotel-yoyogi-uehara",

@@ -1644,9 +1644,34 @@ def lock_disneysea_day(days: dict) -> None:
         for event in source["events"]
         if event is not disney and "actividad libre" not in event["title"].lower()
     ]
+    walk = [event for event in target["events"] if event.get("category") != "hotel"]
     target["events"] = [
         event for event in target["events"] if event.get("category") == "hotel"
     ]
+    stayers = all_except(
+        "pipe", "mafalda", "julian", reason="Se regresan el 16 de noviembre"
+    )
+    for event in walk:
+        event["id"] = event["id"].replace("2026-11-15", "2026-11-16", 1)
+        event["participants"] = stayers
+        event["track"] = "stay"
+        event["inferred"] = True
+        title = event["title"]
+        title = title.replace(" (Festival Shichi-Go-San con niños en kimono)", "")
+        title = title.replace(" (con festival incluido)", "")
+        event["title"] = title
+        lowered = title.lower()
+        if "meiji" in lowered:
+            event["description"] = (
+                "Entran por el gran torii y recorren el santuario. "
+                "Shichi-Go-San fue el domingo 15, el día de DisneySea, así que este lunes puede estar más tranquilo."
+            )
+        elif "ginkgo" in lowered:
+            event["description"] = (
+                "Caminan la avenida de ginkgos de Jingu Gaien. "
+                "La temporada sigue a mediados de noviembre; el pico del fin de semana ya pasó. "
+                "Conservar margen para Shibuya."
+            )
     target["summary"] = (
         "Los ocho van a Tokyo DisneySea. Es el 15, no el 16, porque Julián, Pipe y Mafalda se regresan al día siguiente. "
         "Salida del hotel hacia las 08:00. Falta comprar las entradas."
@@ -1675,39 +1700,10 @@ def lock_disneysea_day(days: dict) -> None:
 
     source["summary"] = (
         "Julián, Pipe y Mafalda se regresan. "
-        "Sergio, Arley, Johan, Tatiana y Sebastián se quedan en Tokio, sin un plan cerrado."
+        "Sergio, Arley, Johan, Tatiana y Sebastián hacen el paseo de Meiji, Harajuku y Shibuya."
     )
-    source["events"].insert(
-        0,
-        {
-            "id": "2026-11-16-dia-libre",
-            "start": "10:00",
-            "end": "18:00",
-            "inferred": False,
-            "scheduleLocked": True,
-            "track": "stay",
-            "title": "Día libre en Tokio",
-            "category": "visita",
-            "description": (
-                "Sin plan cerrado para quienes se quedan. "
-                "El paseo de Meiji, Harajuku y Shibuya que estaba en el 15 sale del calendario porque ese día es DisneySea."
-            ),
-            "from": place("yoyogi_hotel"),
-            "to": place("yoyogi_hotel"),
-            "travel": {"mode": "walk", "durationMin": 0, "notes": "Salen y vuelven al hotel"},
-            "participants": all_except(
-                "pipe", "mafalda", "julian", reason="Se regresan el 16 de noviembre"
-            ),
-            "bookingStatus": "walk_in",
-            "bookingDetail": "Nada que reservar",
-            "costs": [],
-            "reservation": "",
-            "image": "",
-            "bring": [],
-            "dontBring": [],
-            "source": "grupo",
-        },
-    )
+    hotels = source["events"]
+    source["events"] = walk + hotels
     source["events"].insert(
         0,
         {
